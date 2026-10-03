@@ -9,7 +9,6 @@
   }
 
   function setCurrentSection(sectionId) {
-    // Một mục điều hướng bao trùm phần mở đầu, dòng thời gian, quiz và giới thiệu.
     const activeId = ["top", "timeline", "quiz", "gioi-thieu"].includes(sectionId)
       ? "top"
       : sectionId;
@@ -35,7 +34,6 @@
   const sections = document.querySelectorAll("#top, #timeline, #quiz, #gioi-thieu, #ban-do");
   if (!("IntersectionObserver" in window) || !sections.length) return;
 
-  // Dải quan sát giữa màn hình giúp mục đang đọc được chọn ổn định khi cuộn.
   let sectionObserver;
 
   function observeSections() {

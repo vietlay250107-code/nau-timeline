@@ -1,4 +1,3 @@
-/* Màu khởi động giữ trang có nền trước khi bảng cảnh trong sky.js chạy. */
 @property --sky-top {
   syntax: "<color>";
   inherits: true;
@@ -24,9 +23,7 @@
   --paper: #fbf6ea;
   --paper-edge: #e8ddc7;
   --muted-ink: color-mix(in srgb, var(--ink) 82%, var(--sky-bottom));
-  /* Màu đỏ đậm giữ chữ nhỏ dễ đọc trên nền trời sáng. */
   --brand-ink: #8f1a1e;
-  /* Các lớp nổi dùng chung thang này để tránh che phần chữ cần đọc. */
   --z-decoration: 5;
   --z-floating: 40;
   --z-scene: 20;
@@ -290,7 +287,6 @@ html[data-tone="dark"] .home-hero__meta span:first-child {
 }
 
 .map-attachment__slot {
-  /* Chiều cao theo ảnh gốc để tọa độ ghim phần trăm không bị lệch. */
   position: relative;
   width: 100%;
 }
@@ -566,38 +562,31 @@ html[data-tone="dark"] .home-hero__meta span:first-child {
   background: color-mix(in srgb, var(--paper) 72%, var(--sky-bottom));
 }
 
-/* Khung cổng trường theo tỉ lệ ảnh thành viên 1 để giữ cùng dáng ảnh 4:3. */
 .scene--dawn .scene__placeholder,
 .scene--dawn .scene__photo {
   aspect-ratio: 4 / 3;
 }
 
-/* Giữ đúng tỉ lệ ảnh sân trường để không cắt mất nội dung ảnh. */
 .scene--late-morning .scene__photo {
   aspect-ratio: 1000 / 750;
 }
 
-/* Giữ tỉ lệ ảnh sân bóng để không cắt mất chiều rộng sân. */
 .scene--evening .scene__photo {
   aspect-ratio: 2048 / 1153;
 }
 
-/* Giữ tỉ lệ ảnh ban đêm để không cắt mất cổng đá và tòa nhà. */
 .scene--night .scene__photo {
   aspect-ratio: 2048 / 1536;
 }
 
-/* Giữ khung ảnh ôn bài theo tỉ lệ ảnh gốc để thấy trọn nhóm học. */
 .scene--blue-hour .scene__photo {
   aspect-ratio: 2560 / 1707;
 }
 
-/* Giữ tỉ lệ ảnh căng tin để không cắt mất quầy hàng và không gian bên trong. */
 .scene--noon .scene__photo {
   aspect-ratio: 1920 / 2560;
 }
 
-/* Giữ trọn ảnh thư viện chụp ngang để không cắt mất hai bên khung hình. */
 .scene--afternoon .scene__photo {
   aspect-ratio: 1200 / 674;
 }
@@ -682,7 +671,6 @@ html[data-tone="dark"] .home-hero__meta span:first-child {
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-  /* Nén vừa phải các cảnh hai cột để thẻ giấy còn đủ chỗ ở tablet ngang. */
   .scene__row {
     min-height: clamp(430px, 64svh, 620px);
   }

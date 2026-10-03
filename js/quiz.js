@@ -13,7 +13,6 @@
   const retryButton = document.querySelector("#quiz-retry");
   const storageKey = "nau-quiz-best";
 
-  // Câu hỏi chỉ dùng những chi tiết đã xuất hiện trên trang.
   const questions = [
     {
       question: "Mốc 07:30 diễn ra ở đâu?",
@@ -132,7 +131,6 @@
       try {
         window.localStorage.setItem(storageKey, String(bestScore));
       } catch (error) {
-        // Trang vẫn dùng được khi trình duyệt chặn lưu trữ.
       }
     }
   }

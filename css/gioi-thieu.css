@@ -408,7 +408,6 @@
   line-height: 1.8;
 }
 
-/* Các mục mới dùng sắc kem xen kẽ để giữ mạch thị giác của phần giới thiệu. */
 .about__section--technology,
 .about__section--members {
   background: var(--paper);
@@ -519,7 +518,6 @@
   list-style: none;
 }
 
-/* Lớp nền giữ trục nhìn rõ; lớp màu được co giãn khi từng bước xuất hiện. */
 .about__process::before,
 .about__process::after {
   position: absolute;

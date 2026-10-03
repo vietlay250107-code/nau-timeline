@@ -23,7 +23,6 @@
     void digit.offsetWidth;
     digit.classList.add("is-flipping");
 
-    // Số đổi ở nửa vòng lật để khớp với mặt sau của ô đồng hồ.
     const changeTimer = window.setTimeout(() => {
       digit.textContent = value;
     }, 200);

@@ -25,7 +25,6 @@
   }
 
   if (process && processSteps.length) {
-    // Giữ mốc cao nhất đã xem để đường tiến trình không lùi khi cuộn ngược lên.
     let furthestStep = -1;
     const processObserver = new IntersectionObserver((entries, activeObserver) => {
       entries.forEach((entry) => {

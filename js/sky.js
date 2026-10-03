@@ -3,7 +3,6 @@
   const scenes = Array.from(document.querySelectorAll("section.scene[data-hour]"));
   const root = document.documentElement;
 
-  // Bảng nằm ở đây để mọi cảnh và hiệu ứng dùng chung một nguồn màu.
   const palettes = {
     h06: { hour: "06:00", top: "#FFB38A", bottom: "#FFD9B0", ink: "#3A1F12" },
     h0730: { hour: "07:30", top: "#FFC9A0", bottom: "#FFE8CC", ink: "#3A1F12" },
@@ -11,7 +10,6 @@
     h11: { hour: "11:00", top: "#A9DCEF", bottom: "#EAF8FB", ink: "#10303F" },
     h14: { hour: "14:00", top: "#F7D58A", bottom: "#FFEBC2", ink: "#3B2A00" },
     h17: { hour: "17:00", top: "#F58A4B", bottom: "#FFC38A", ink: "#3A1A08" },
-    // Hạ nhẹ nền cuối ngày để chữ phụ pha từ mực sáng vẫn đủ tương phản.
     h19: { hour: "19:00", top: "#2F4363", bottom: "#465B7B", ink: "#F4F1E8" },
     h22: { hour: "22:00", top: "#0C1830", bottom: "#1B2D4F", ink: "#F4F1E8" }
   };
@@ -64,7 +62,6 @@
     publishScene(scene);
   }
 
-  // Lần đầu mở trang nằm ngoài dòng thời gian thì trả màu về buổi sớm.
   if (!timelineIsVisible) {
     resetScene();
   } else {
