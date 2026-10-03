@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="NAU Timeline — Một ngày ở Trường Đại học Nghệ An">
+    <meta name="theme-color" content="#f6f1e5">
+    <title>NAU Timeline — Một ngày ở Trường Đại học Nghệ An</title>
+    <link rel="icon" href="assets/logo/favicon.ico" sizes="any">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- TODO: Tài liệu chính thức hiện chỉ đưa SRI cho 5.3.8; chờ hash 5.3.3, không tự đoán. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/gioi-thieu.css" rel="stylesheet">
+    <link href="css/core.css" rel="stylesheet">
+  </head>
+  <body class="site-page site-page--home site-page--about">
+    <a class="skip-link" href="#main-content">Bỏ qua điều hướng, đến nội dung</a>
+
+    <header class="site-header fixed-top">
+      <nav class="navbar navbar-expand-md navbar-light site-nav" aria-label="Điều hướng chính">
+        <div class="container site-shell">
+          <a class="brand-lockup" href="#top" aria-label="NAU Timeline — Trang giới thiệu">
+            <img class="brand-lockup__image" src="assets/logo/logo-sm.png" alt="Logo chữ NAU — Trường Đại học Nghệ An" width="264" height="109">
+          </a>
+          <button class="navbar-toggler site-nav__toggle" type="button" data-bs-toggle="collapse" data-bs-target="#site-navigation" aria-controls="site-navigation" aria-expanded="false" aria-label="Mở hoặc đóng menu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse site-nav__menu" id="site-navigation">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+              <li class="nav-item"><a class="nav-link site-nav__link" href="#top">Giới thiệu</a></li>
+              <li class="nav-item"><a class="nav-link site-nav__link" href="ban-do.html#ban-do">Trường tôi</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="about" id="main-content">
+      <section class="about-hero" id="top" aria-labelledby="page-title">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-12 col-md-7 about-hero__copy">
+              <div class="page-lead">
+                <p class="eyebrow"><span class="eyebrow__rule" aria-hidden="true"></span> Trường Đại học Nghệ An · Nghe An University</p>
+                <h1 class="page-lead__title" id="page-title">Một ngày<br><span>ở NAU</span></h1>
+                <p class="page-lead__intro">NAU Timeline ghi lại nhịp sinh hoạt trong khuôn viên Trường Đại học Nghệ An qua tám mốc giờ — từ những chiếc xe máy đầu tiên trước cổng trường đến ánh đèn hành lang lúc khuya.</p>
+                <p class="home-hero__meta"><span>NAU TIMELINE</span><span aria-hidden="true">·</span><span>06:00 — 22:00</span></p>
+                <div class="about-hero__actions about__reveal">
+                  <a class="about__button about__button--primary" href="#timeline">Xem dòng thời gian</a>
+                  <a class="about__button about__button--outline" href="ban-do.html">Xem trường tôi</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-5 about-hero__ticket-column">
+              <aside class="about__ticket about__reveal" aria-label="Vé một ngày học ở NAU">
+                <div class="about__ticket-heading">
+                  <img src="assets/logo/logo-sm.png" alt="Logo chữ NAU" width="264" height="109">
+                  <span>VÉ NGÀY HỌC</span>
+                </div>
+                <p class="about__ticket-time">06:00 <span aria-hidden="true">→</span> 22:00</p>
+                <p class="about__ticket-count">8 mốc giờ <span>·</span> 1 ngày ở trường</p>
+                <div class="about__barcode" aria-hidden="true"></div>
+                <span class="about__ticket-code">NAU / 06—22</span>
+              </aside>
+            </div>
+          </div>
+        </div>
+        <div class="home-hero__edge-note" aria-hidden="true">NGHỆ AN · VIỆT NAM</div>
+        <a class="about__scroll-cue" href="#timeline"><span>Cuộn xuống</span><i aria-hidden="true">↓</i></a>
+      </section>
+
+      <aside class="day-clock" aria-hidden="true">
+        <span class="day-clock__label">GIỜ TRONG NGÀY</span>
+        <div class="day-clock__digits">
+          <span class="day-clock__digit" data-clock-digit>0</span>
+          <span class="day-clock__digit" data-clock-digit>6</span>
+          <span class="day-clock__separator">:</span>
+          <span class="day-clock__digit" data-clock-digit>0</span>
+          <span class="day-clock__digit" data-clock-digit>0</span>
+        </div>
+      </aside>
+      <p class="visually-hidden" id="scene-announcement" aria-live="polite" aria-atomic="true"></p>
+
+      <section class="timeline" id="timeline" aria-labelledby="timeline-title">
+        <h2 class="visually-hidden" id="timeline-title">Dòng thời gian một ngày ở Trường Đại học Nghệ An</h2>
+
+        <section class="scene scene--dawn container py-5" id="h06" data-hour="06:00" aria-labelledby="scene-title-06">
+          <span class="scene__backdrop-time" aria-hidden="true">06:00</span>
+          <div class="row align-items-center g-4 scene__row">
+            <div class="col-12 col-md-6 order-1 scene__content-column">
+              <article class="scene__paper">
+                <p class="scene__eyebrow">Mốc 01 <span aria-hidden="true">/</span> Cùng đến với trường tôi</p>
+                <h2 class="scene__title" id="scene-title-06">Cổng trường</h2>
+                <p class="scene__text">Những chiếc xe máy đầu tiên rẽ vào trường khi trời còn dịu mát. Một ngày học bắt đầu bằng tiếng chào bác bảo vệ và bước chân vội về phía lớp.</p>
+                <p class="scene__detail"><span class="scene__detail-label">Bắt đầu một ngày cùng với</span><span>Trường Đại học Nghệ An.</span></p>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 order-2 scene__media-column">
+              <figure class="scene__ticket">
+                <img class="scene__photo" src="assets/img/cong-truong.png" alt="Cổng Trường Đại học Nghệ An lúc 06:00" width="1856" height="2304" loading="lazy" decoding="async">
+                <figcaption class="scene__ticket-caption">06:00 <span>·</span> CỔNG TRƯỜNG</figcaption>
+                <span class="scene__corner-ticket" aria-hidden="true">VÉ BUỔI SỚM</span>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section class="scene scene--morning scene--reverse container py-5" id="h0730" data-hour="07:30" aria-labelledby="scene-title-0730">
+          <span class="scene__backdrop-time" aria-hidden="true">07:30</span>
+          <div class="row align-items-center g-4 scene__row">
+            <div class="col-12 col-md-6 order-1 order-md-2 scene__content-column">
+              <article class="scene__paper">
+                <p class="scene__eyebrow">Mốc 02 <span aria-hidden="true">/</span> Tiết thực hành</p>
+                <h2 class="scene__title" id="scene-title-0730">Phòng học</h2>
+                <p class="scene__text">Màn hình lần lượt sáng lên, tiếng gõ phím lấp đầy khoảng lặng đầu buổi. Cả lớp cùng làm bài thực hành, thỉnh thoảng ghé sang máy bên cạnh để hỏi nhanh một dòng code.</p>
+                <p class="scene__detail"><span class="scene__detail-label">Đây là nơi chúng tôi</span><span>Tạo ra tương lai.</span></p>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 order-2 order-md-1 scene__media-column">
+              <figure class="scene__ticket">
+                <img class="scene__photo" src="assets/img/phong-hoc.jpg" alt="Phòng học Trường Đại học Nghệ An lúc 07:30" width="1920" height="2560" loading="lazy" decoding="async">
+                <figcaption class="scene__ticket-caption">07:30 <span>·</span> PHÒNG HỌC</figcaption>
+                <span class="scene__corner-ticket" aria-hidden="true">GIỜ THỰC HÀNH</span>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section class="scene scene--late-morning container py-5" id="h10" data-hour="10:00" aria-labelledby="scene-title-10">
+          <span class="scene__backdrop-time" aria-hidden="true">10:00</span>
+          <div class="row align-items-center g-4 scene__row">
+            <div class="col-12 col-md-6 order-1 scene__content-column">
+              <article class="scene__paper">
+                <p class="scene__eyebrow">Mốc 03 <span aria-hidden="true">/</span> Giờ giải lao</p>
+                <h2 class="scene__title" id="scene-title-10">Sân trường</h2>
+                <p class="scene__text">Chuông giải lao vừa dứt, những chiếc ghế đá nhanh chóng có người ngồi. Bạn bè tụ lại kể chuyện lớp, chuyền nhau chai nước rồi tranh thủ tận hưởng chút nắng giữa buổi.</p>
+                <p class="scene__detail"><span class="scene__detail-label">Giờ giải lao của chúng tôi</span><span>Sau những tiết học.</span></p>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 order-2 scene__media-column">
+              <figure class="scene__ticket">
+                <img class="scene__photo" src="assets/img/san-truong.jpg" alt="Hoạt động ngoài sân trường Trường Đại học Nghệ An lúc 10:00" width="1000" height="750" loading="lazy" decoding="async">
+                <figcaption class="scene__ticket-caption">10:00 <span>·</span> SÂN TRƯỜNG</figcaption>
+                <span class="scene__corner-ticket" aria-hidden="true">GIỜ GIẢI LAO</span>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section class="scene scene--noon scene--reverse container py-5" id="h11" data-hour="11:00" aria-labelledby="scene-title-11">
+          <span class="scene__backdrop-time" aria-hidden="true">11:00</span>
+          <div class="row align-items-center g-4 scene__row">
+            <div class="col-12 col-md-6 order-1 order-md-2 scene__content-column">
+              <article class="scene__paper">
+                <p class="scene__eyebrow">Mốc 04 <span aria-hidden="true">/</span> Đến giờ ăn</p>
+                <h2 class="scene__title" id="scene-title-11">Căng tin</h2>
+                <p class="scene__text">Hàng người nối nhau trước quầy, ai cũng ngó xem hôm nay có món gì nhanh và vừa túi tiền. Bữa trưa giản dị ngon hơn khi được ngồi cùng nhóm bạn sau một buổi học dài.</p>
+                <p class="scene__detail"><span class="scene__detail-label">Giờ ăn đây rồi</span><span>Đói lắm rồi phải ăn thôi.</span></p>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 order-2 order-md-1 scene__media-column">
+              <figure class="scene__ticket">
+                <img class="scene__photo" src="assets/img/cang-tin.jpg" alt="Không gian căng tin với quầy hàng và bàn ghế" width="1920" height="2560" loading="lazy" decoding="async">
+                <figcaption class="scene__ticket-caption">11:00 <span>·</span> CĂNG TIN</figcaption>
+                <span class="scene__corner-ticket" aria-hidden="true">BỮA TRƯA</span>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section class="scene scene--afternoon container py-5" id="h14" data-hour="14:00" aria-labelledby="scene-title-14">
+          <span class="scene__backdrop-time" aria-hidden="true">14:00</span>
+          <div class="row align-items-center g-4 scene__row">
+            <div class="col-12 col-md-6 order-1 scene__content-column">
+              <article class="scene__paper">
+                <p class="scene__eyebrow">Mốc 05 <span aria-hidden="true">/</span> Buổi chiều</p>
+                <h2 class="scene__title" id="scene-title-14">Thư viện</h2>
+                <p class="scene__text">Tiếng lật trang và tiếng bước chân khẽ tạo nên nhịp riêng trong thư viện. Người tìm tài liệu, người ngồi hoàn thiện bài tập, ai cũng quý một góc đủ yên để tập trung.</p>
+                <p class="scene__detail"><span class="scene__detail-label">Nói nhỏ nè</span><span> Ổ cắm ở tầng 7 là tài nguyên quý — tìm được chỗ trống thấy nhẹ cả người.</span></p>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 order-2 scene__media-column">
+              <figure class="scene__ticket">
+                <img class="scene__photo" src="assets/img/thu-vien.jpg" alt="Sinh viên học tập trong thư viện" width="1200" height="674" loading="lazy" decoding="async">
+                <figcaption class="scene__ticket-caption">14:00 <span>·</span> THƯ VIỆN</figcaption>
+                <span class="scene__corner-ticket" aria-hidden="true">GÓC TẬP TRUNG</span>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section class="scene scene--evening scene--reverse container py-5" id="h17" data-hour="17:00" aria-labelledby="scene-title-17">
+          <span class="scene__backdrop-time" aria-hidden="true">17:00</span>
+          <div class="row align-items-center g-4 scene__row">
+            <div class="col-12 col-md-6 order-1 order-md-2 scene__content-column">
+              <article class="scene__paper">
+                <p class="scene__eyebrow">Mốc 06 <span aria-hidden="true">/</span> Tan học</p>
+                <h2 class="scene__title" id="scene-title-17">CLB &amp; thể thao</h2>
+                <p class="scene__text">Tan tiết cuối, sân bóng và sân cầu lông lại rộn lên. Ở một góc khác, thành viên câu lạc bộ tranh thủ tập văn nghệ và chuẩn bị cho buổi sinh hoạt tiếp theo.</p>
+                <p class="scene__detail"><span class="scene__detail-label">Sau giờ học</span><span>Cuối cùng đã tìm lại được chính mình rồi nè.</span></p>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 order-2 order-md-1 scene__media-column">
+              <figure class="scene__ticket">
+                <img class="scene__photo" src="assets/img/san-bong.jpg" alt="Hoạt động bóng đá ngoài trời của sinh viên lúc 17:00" width="2048" height="1153" loading="lazy" decoding="async">
+                <figcaption class="scene__ticket-caption">17:00 <span>·</span> CLB &amp; THỂ THAO</figcaption>
+                <span class="scene__corner-ticket" aria-hidden="true">GIỜ VẬN ĐỘNG</span>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section class="scene scene--blue-hour container py-5" id="h19" data-hour="19:00" aria-labelledby="scene-title-19">
+          <span class="scene__backdrop-time" aria-hidden="true">19:00</span>
+          <div class="row align-items-center g-4 scene__row">
+            <div class="col-12 col-md-6 order-1 scene__content-column">
+              <article class="scene__paper">
+                <p class="scene__eyebrow">Mốc 07 <span aria-hidden="true">/</span> Sau giờ học</p>
+                <h2 class="scene__title" id="scene-title-19">Ôn bài</h2>
+                <p class="scene__text">Quán cà phê quanh trường trở thành chỗ học nhóm quen thuộc. Vở mở giữa bàn, mỗi người xử lý một phần bài tập và cùng nhắc nhau về deadline đang đến gần.</p>
+                <p class="scene__detail"><span class="scene__detail-label">Học nhóm nào</span><span>“Còn phần nào chưa hiểu không?” là câu mở đầu cho một buổi tối dài.</span></p>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 order-2 scene__media-column">
+              <figure class="scene__ticket">
+                <img class="scene__photo" src="assets/img/on-bai.jpg" alt="Nhóm sinh viên ngồi học bài tại quán cà phê buổi tối" width="2560" height="1707" loading="lazy" decoding="async">
+                <figcaption class="scene__ticket-caption">19:00 <span>·</span> ÔN BÀI</figcaption>
+                <span class="scene__corner-ticket" aria-hidden="true">DEADLINE ĐANG TỚI</span>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section class="scene scene--night scene--reverse container py-5" id="h22" data-hour="22:00" aria-labelledby="scene-title-22">
+          <span class="scene__backdrop-time" aria-hidden="true">22:00</span>
+          <div class="row align-items-center g-4 scene__row">
+            <div class="col-12 col-md-6 order-1 order-md-2 scene__content-column">
+              <article class="scene__paper">
+                <p class="scene__eyebrow">Mốc 08 <span aria-hidden="true">/</span> Khép lại ngày</p>
+                <h2 class="scene__title" id="scene-title-22">Đêm yên tĩnh</h2>
+                <p class="scene__text">Đèn hành lang vẫn sáng khi khuôn viên dần lắng xuống. Một ngày học khép lại; ngày mai, những tấm vé thời gian lại bắt đầu từ cổng trường.</p>
+                <p class="scene__detail"><span class="scene__detail-label">Buồn ngủ quá đi</span><span>Đi ngủ thôi nào mai bắt đầu ngày mới.</span></p>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 order-2 order-md-1 scene__media-column">
+              <figure class="scene__ticket">
+                <img class="scene__photo" src="assets/img/dem-yen-tinh.jpg" alt="Khuôn viên Trường Đại học Nghệ An về đêm lúc 22:00" width="2048" height="1536" loading="lazy" decoding="async">
+                <figcaption class="scene__ticket-caption">22:00 <span>·</span> ĐÊM YÊN TĨNH</figcaption>
+                <span class="scene__corner-ticket" aria-hidden="true">HẾT MỘT NGÀY</span>
+              </figure>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="quiz" id="quiz" aria-labelledby="quiz-title">
+        <div class="container quiz__inner">
+          <header class="quiz__heading">
+            <p class="quiz__eyebrow">Cuối ngày <span aria-hidden="true">/</span> Kiểm tra trí nhớ</p>
+            <h2 class="quiz__title" id="quiz-title">Bạn còn nhớ gì?</h2>
+            <p class="quiz__best" id="quiz-best" aria-live="polite">Điểm cao nhất: 0/3</p>
+          </header>
+          <form class="quiz__form" id="quiz-form">
+            <div class="quiz__ticket">
+              <p class="quiz__step" id="quiz-step">Câu 1/3</p>
+              <fieldset class="quiz__fieldset">
+                <legend class="quiz__question" id="quiz-question" aria-live="polite" aria-atomic="true"></legend>
+                <div class="quiz__options" id="quiz-options"></div>
+              </fieldset>
+              <p class="quiz__feedback" id="quiz-feedback" role="status" aria-live="polite"></p>
+              <button class="quiz__submit" id="quiz-submit" type="submit">Kiểm tra</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <div class="modal fade quiz__modal" id="quiz-result" tabindex="-1" aria-labelledby="quiz-result-title" aria-describedby="quiz-result-score">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content quiz__modal-content">
+            <div class="modal-header quiz__modal-header">
+              <h2 class="modal-title quiz__modal-title" id="quiz-result-title">Kết quả cuối ngày</h2>
+              <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Đóng kết quả"></button>
+            </div>
+            <div class="modal-body quiz__modal-body">
+              <p class="quiz__result-score" id="quiz-result-score"></p>
+              <p class="quiz__result-message" id="quiz-result-message"></p>
+              <p class="quiz__best quiz__best--modal" id="quiz-best-modal"></p>
+            </div>
+            <div class="modal-footer quiz__modal-footer">
+              <button class="quiz__retry" id="quiz-retry" type="button" data-bs-dismiss="modal">Làm lại</button>
+              <a class="quiz__return" href="#top" data-bs-dismiss="modal">Về 06:00</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about__details" id="gioi-thieu">
+      <section class="about__section about__section--idea" id="y-tuong" aria-labelledby="idea-title">
+        <div class="container">
+          <div class="row g-4 g-lg-5 about__idea-grid">
+            <div class="col-12 col-md-5 about__section-heading about__reveal">
+              <p class="about__section-label">01 / Ý tưởng</p>
+              <h2 class="about__section-title" id="idea-title">Một ngày,<br>8 khung giờ</h2>
+            </div>
+            <div class="col-12 col-md-7 about__idea-copy about__reveal">
+              <p>Đời sống sinh viên không chỉ diễn ra trong giờ lên lớp. Mỗi thời điểm có một nhịp riêng: cổng trường buổi sớm, căng tin giờ trưa, thư viện đầu chiều hay buổi học nhóm khi trời tối. Đồ án chọn những khoảnh khắc quen thuộc ấy để kể về một ngày ở Trường Đại học Nghệ An.</p>
+              <p>Website dẫn người xem qua tám mốc giờ thay vì đặt các hoạt động thành những mục rời nhau. Màu bầu trời thay đổi theo từng cảnh, từ sắc sáng sớm đến nền đêm yên tĩnh. Nhịp màu và thời gian giúp người xem cảm nhận ngày học đang trôi qua.</p>
+            </div>
+            <blockquote class="col-12 about__quote about__reveal">Mỗi giờ trong ngày là một góc khác của ngôi trường.</blockquote>
+          </div>
+        </div>
+      </section>
+      <section class="about__section about__section--features" id="diem-noi-bat" aria-labelledby="features-title">
+        <div class="container">
+          <div class="about__section-heading about__section-heading--wide about__reveal">
+            <p class="about__section-label">02 / Điểm nổi bật</p>
+          <h2 class="about__section-title" id="features-title">Thời gian trở thành<br>một phần của giao diện</h2>
+          </div>
+          <div class="about__features">
+            <article class="about__feature about__feature--sky about__reveal">
+              <span class="about__feature-number" aria-hidden="true">01</span>
+              <div class="about__mini about__mini--sky" aria-hidden="true"><span></span><span></span><span></span></div>
+              <h3>Bầu trời đổi màu</h3>
+              <p>Sắc trời chuyển theo mốc giờ, để mỗi cảnh có không khí riêng từ buổi sớm đến đêm.</p>
+            </article>
+            <article class="about__feature about__feature--clock about__reveal">
+              <span class="about__feature-number" aria-hidden="true">02</span>
+              <div class="about__mini about__mini--clock" aria-hidden="true"><span>07</span><span>30</span></div>
+              <h3>Đồng hồ theo cảnh</h3>
+              <p>Đồng hồ lật số hiển thị giờ của khoảnh khắc đang nằm giữa màn hình.</p>
+            </article>
+            <article class="about__feature about__feature--orbit about__reveal">
+              <span class="about__feature-number" aria-hidden="true">03</span>
+              <div class="about__mini about__mini--orbit" aria-hidden="true"><span class="about__orbit-path"></span><span class="about__orbit-sun"></span></div>
+              <h3>Mặt trời và mặt trăng</h3>
+              <p>Vị trí thiên thể dịch chuyển theo tiến độ cuộn, rồi đổi từ mặt trời sang mặt trăng khi trời tối.</p>
+            </article>
+            <article class="about__feature about__feature--quiz about__reveal">
+              <span class="about__feature-number" aria-hidden="true">04</span>
+              <div class="about__mini about__mini--quiz" aria-hidden="true"><span></span><span></span><span></span><b>2/3</b></div>
+              <h3>Câu hỏi nhanh về trường</h3>
+              <p>Ba câu hỏi ngắn giúp người xem thử nhớ những chi tiết vừa gặp trong hành trình.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="about__section about__section--technology about__reveal" id="cong-nghe" aria-labelledby="technology-title">
+        <div class="container">
+          <div class="about__section-heading about__reveal">
+            <p class="about__section-label">03 / Công nghệ</p>
+            <h2 class="about__section-title" id="technology-title">Công cụ tạo nên<br>một ngày ở NAU</h2>
+          </div>
+          <div class="about__tech-marquee about__reveal" tabindex="0" role="group" aria-label="Các công nghệ được dùng trong dự án">
+            <div class="about__tech-track">
+              <p class="about__tech-group">HTML5 <span aria-hidden="true">·</span> CSS3 <span aria-hidden="true">·</span> JAVASCRIPT <span aria-hidden="true">·</span> BOOTSTRAP 5 <span aria-hidden="true">·</span> GITHUB PAGES <span aria-hidden="true">·</span> VS CODE <span aria-hidden="true">·</span> CODEX <span aria-hidden="true">·</span> CLAUDE <span aria-hidden="true">·</span> ANTIGRAVITY <span aria-hidden="true">·</span></p>
+              <p class="about__tech-group about__tech-group--duplicate" aria-hidden="true">HTML5 <span>·</span> CSS3 <span>·</span> JAVASCRIPT <span>·</span> BOOTSTRAP 5 <span>·</span> GITHUB PAGES <span>·</span> VS CODE <span>·</span> CODEX <span>·</span> CLAUDE <span>·</span> ANTIGRAVITY <span>·</span></p>
+            </div>
+          </div>
+          <div class="about__tech-table-wrap about__reveal">
+            <table class="about__tech-table">
+              <caption>Các công nghệ và vai trò trong quá trình xây dựng NAU Timeline.</caption>
+              <thead><tr><th scope="col">Công nghệ</th><th scope="col">Dùng để làm gì</th></tr></thead>
+              <tbody>
+                <tr><th scope="row" data-label="Công nghệ">HTML5</th><td data-label="Dùng để làm gì">Tạo cấu trúc và nội dung cho các trang.</td></tr>
+                <tr><th scope="row" data-label="Công nghệ">CSS3</th><td data-label="Dùng để làm gì">Định dạng giao diện, bố cục và chuyển động.</td></tr>
+                <tr><th scope="row" data-label="Công nghệ">JavaScript</th><td data-label="Dùng để làm gì">Điều khiển các tương tác trên trang.</td></tr>
+                <tr><th scope="row" data-label="Công nghệ">Bootstrap 5</th><td data-label="Dùng để làm gì">Dùng lưới responsive và các thành phần giao diện.</td></tr>
+                <tr><th scope="row" data-label="Công nghệ">Claude</th><td data-label="Dùng để làm gì">Hỗ trợ lên ý tưởng, xây dựng kịch bản chi tiết từng bước làm website.</td></tr>
+                <tr><th scope="row" data-label="Công nghệ">VS Code</th><td data-label="Dùng để làm gì">Soạn thảo mã nguồn của dự án.</td></tr>
+                <tr><th scope="row" data-label="Công nghệ">Codex</th><td data-label="Dùng để làm gì">Hỗ trợ đọc, viết và chỉnh sửa mã trong quá trình làm đồ án.</td></tr>
+                <tr><th scope="row" data-label="Công nghệ">Antigravity</th><td data-label="Dùng để làm gì">Hỗ trợ việc test thử website và nêu ra những vấn đề cần sửa.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="about__section about__section--process about__reveal" id="quy-trinh" aria-labelledby="process-title">
+        <div class="container">
+          <div class="about__section-heading about__section-heading--wide about__reveal">
+            <p class="about__section-label">04 / Quy trình</p>
+            <h2 class="about__section-title" id="process-title">Từ ý tưởng<br>đến trang web</h2>
+          </div>
+          <ol class="about__process" aria-label="Năm bước thực hiện dự án">
+            <li class="about__process-step about__reveal">
+              <article class="about__process-card"><h3>Chọn đề tài</h3><p>Xác định hướng kể một ngày qua các mốc giờ và không gian trong website.</p></article>
+            </li>
+            <li class="about__process-step about__reveal">
+              <article class="about__process-card"><h3>Thu thập ảnh và nội dung</h3><p>Tập hợp tư liệu nhóm có thể sử dụng, rồi viết nội dung cho từng phần của trang.</p></article>
+            </li>
+            <li class="about__process-step about__reveal">
+              <article class="about__process-card"><h3>Thiết kế, lấy màu từ logo</h3><p>Chọn bảng màu theo logo NAU và sắp xếp nội dung thành các phần dễ theo dõi.</p></article>
+            </li>
+            <li class="about__process-step about__reveal">
+              <article class="about__process-card"><h3>Lập trình</h3><p>Dựng các trang bằng HTML, CSS và JavaScript, kết hợp các thành phần Bootstrap cần thiết.</p></article>
+            </li>
+            <li class="about__process-step about__reveal">
+              <article class="about__process-card"><h3>Kiểm thử và đưa lên GitHub Pages</h3><p>Kiểm tra giao diện ở các kích thước màn hình, sau đó xuất bản website tĩnh.</p></article>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="about__section about__section--members about__reveal" id="thanh-vien" aria-labelledby="members-title">
+        <div class="container">
+          <div class="about__section-heading about__reveal">
+            <p class="about__section-label">05 / Giới thiệu</p>
+            <h2 class="about__section-title" id="members-title">Người đề ra ý tưởng<br>và xây dựng website</h2>
+            <p class="about__member-group">Sinh viên Trường Đại học Nghệ An</p>
+          </div>
+          <div class="about__members">
+            <article class="about__member about__member--one about__reveal">
+              <div class="about__student-card">
+                <img class="about__member-photo" src="assets/img/anh-tao.jpg" alt="Ảnh thành viên thứ nhất" width="1600" height="1200" loading="lazy" decoding="async">
+                <div class="about__member-details">
+                  <img src="assets/logo/logo-sm.png" alt="Logo chữ NAU" width="264" height="109">
+                  <h3>Nguyễn Hoàng Việt</h3>
+                  <dl>
+                    <div><dt>MSV:</dt><dd>25ATT178</dd></div>
+                    <div><dt>Lớp:</dt><dd>K12A1</dd></div>
+                    <div><dt>Vai trò:</dt><dd>Nhà phát triển và xây dựng hệ thống website</dd></div>
+                  </dl>
+                  <p class="about__member-school">Khoa Công nghệ Thông tin - Trường Đại học Nghệ An</p>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="about__member-guidance about__reveal">
+            <p><strong>Giảng viên hướng dẫn:</strong> Lê Thị Cẩm Mỹ</p>
+            <p><strong>Môn học:</strong> Thiết kế web</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about__section about__section--faq about__reveal" id="hoi-dap" aria-labelledby="faq-title">
+        <div class="container">
+          <div class="about__section-heading about__reveal">
+            <p class="about__section-label">06 / Hỏi đáp</p>
+            <h2 class="about__section-title" id="faq-title">Một vài<br>điều cần biết</h2>
+          </div>
+          <div class="accordion about__accordion about__reveal" id="about-faq">
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-project" aria-expanded="true" aria-controls="faq-project">NAU Timeline được làm để làm gì?</button>
+              </h3>
+              <div id="faq-project" class="accordion-collapse collapse show" data-bs-parent="#about-faq">
+                <div class="accordion-body">Đây là dự án website tĩnh kể một ngày qua tám mốc giờ, kết hợp dòng thời gian, hình ảnh trường học và phần giới thiệu dự án.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-photos" aria-expanded="false" aria-controls="faq-photos">Ảnh trong website lấy từ đâu?</button>
+              </h3>
+              <div id="faq-photos" class="accordion-collapse collapse" data-bs-parent="#about-faq">
+                <div class="accordion-body">Nguồn ảnh dùng trong dự án được lấy từ các sự kiên thường ngày ở trường Đại Học Nghệ An.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-mobile" aria-expanded="false" aria-controls="faq-mobile">Có thể xem trang trên điện thoại không?</button>
+              </h3>
+              <div id="faq-mobile" class="accordion-collapse collapse" data-bs-parent="#about-faq">
+                <div class="accordion-body">Có thể xem trên điện thoại. Bố cục được điều chỉnh theo chiều rộng màn hình để nội dung có thể xem trên điện thoại, máy tính bảng và máy tính.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-expand" aria-expanded="false" aria-controls="faq-expand">Dự án có thể mở rộng thế nào?</button>
+              </h3>
+              <div id="faq-expand" class="accordion-collapse collapse" data-bs-parent="#about-faq">
+                <div class="accordion-body">Có thể bổ sung ảnh đã được xác nhận, cập nhật nội dung cho từng mốc hoặc thêm thông tin bản đồ khi có tư liệu phù hợp.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-static" aria-expanded="false" aria-controls="faq-static">Website có cần máy chủ backend không?</button>
+              </h3>
+              <div id="faq-static" class="accordion-collapse collapse" data-bs-parent="#about-faq">
+                <div class="accordion-body">Website Không cần máy chủ backend. Đây là website tĩnh, được xây dựng bằng HTML, CSS và JavaScript phía trình duyệt.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about__final-cta about__reveal" aria-labelledby="final-cta-title">
+        <div class="container about__final-content about__reveal">
+          <p class="about__section-label">NAU TIMELINE / 06:00 — 22:00</p>
+          <h2 id="final-cta-title">Sẵn sàng đi hết một ngày ở NAU?</h2>
+          <a class="about__final-link" href="#top">Bắt đầu từ 06:00 <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-shell site-footer__inner">
+        <a class="brand-lockup brand-lockup--footer" href="index.html" aria-label="NAU Timeline — về đầu trang">
+          <img class="brand-lockup__image" src="assets/logo/logo-sm.png" alt="Logo chữ NAU — Trường Đại học Nghệ An" width="264" height="109">
+        </a>
+        <p class="site-footer__caption">Một ngày ở Trường Đại học Nghệ An<br><span>Sinh viên thực hiện: Nguyễn Hoàng Việt</span><span>Giảng viên hướng dẫn: Lê Thị Cẩm Mỹ</span><span>Môn học: Thiết kế web</span></p>
+        <nav class="site-footer__nav" aria-label="Điều hướng chân trang">
+          <a href="#top">Giới thiệu</a>
+          <a href="ban-do.html#ban-do">Trường tôi</a>
+        </nav>
+      </div>
+    </footer>
+
+    <div class="day-orbit" aria-hidden="true">
+      <span class="day-orbit__track"></span>
+      <span class="day-orbit__sun"></span>
+      <span class="day-orbit__moon"></span>
+    </div>
+    <div class="page-progress" aria-hidden="true"><span class="page-progress__fill"></span></div>
+    <a class="back-to-start" href="#top" aria-label="Về mốc 06:00">Về 06:00</a>
+
+    <!-- TODO: Tài liệu chính thức hiện chỉ đưa SRI cho 5.3.8; chờ hash 5.3.3, không tự đoán. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" defer></script>
+    <script src="js/nav.js" defer></script>
+    <script src="js/sky.js" defer></script>
+    <script src="js/clock.js" defer></script>
+    <script src="js/orb.js" defer></script>
+    <script src="js/progress.js" defer></script>
+    <script src="js/quiz.js" defer></script>
+    <script src="js/gioi-thieu.js" defer></script>
+  </body>
+</html>

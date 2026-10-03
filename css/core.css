@@ -1,0 +1,485 @@
+.day-clock {
+  position: fixed;
+  z-index: var(--z-clock);
+  top: 6.15rem;
+  right: max(calc((100vw - 1140px) / 2), 1rem);
+  padding: 0.45rem 0.6rem 0.55rem;
+  border: 1px dashed var(--paper-edge);
+  background: var(--paper);
+  box-shadow: 0 5px 15px rgb(58 31 18 / 10%);
+  color: #3a1f12;
+  text-align: center;
+}
+
+.day-clock__label {
+  display: block;
+  color: #5a4034;
+  font-family: var(--mono-font);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+}
+
+.day-clock__digits {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.12rem;
+  margin-top: 0.25rem;
+  perspective: 12rem;
+}
+
+.day-clock__digit {
+  display: grid;
+  width: 1.45rem;
+  height: 1.85rem;
+  place-items: center;
+  border-bottom: 2px solid var(--brand);
+  background: #fffdf7;
+  color: #3a1f12;
+  font-family: var(--mono-font);
+  font-size: 1.15rem;
+  line-height: 1;
+  transform-origin: center;
+  backface-visibility: hidden;
+}
+
+.day-clock__digit.is-flipping {
+  animation: clock-flip 400ms ease-in-out;
+}
+
+.day-clock__separator {
+  padding-inline: 0.08rem;
+  color: var(--brand);
+  font-family: var(--mono-font);
+  font-size: 1.1rem;
+}
+
+@keyframes clock-flip {
+  0%, 100% { transform: rotateX(0); }
+  50% { transform: rotateX(90deg); }
+}
+
+.day-orbit {
+  position: fixed;
+  z-index: var(--z-decoration);
+  bottom: 1rem;
+  left: 1rem;
+  width: 10rem;
+  height: 5.8rem;
+  pointer-events: none;
+}
+
+.day-orbit__track {
+  position: absolute;
+  inset: 0.45rem 0.45rem 0.35rem;
+  border: 1px dashed color-mix(in srgb, var(--ink) 48%, transparent);
+  border-bottom: 0;
+  border-radius: 100% 100% 0 0;
+}
+
+.day-orbit__sun,
+.day-orbit__moon {
+  position: absolute;
+  top: calc(78% - var(--orbit-lift, 0%));
+  left: var(--orbit-x, 8%);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.day-orbit__sun {
+  background: var(--brand);
+  box-shadow: 0 0 0 5px color-mix(in srgb, var(--brand) 25%, transparent), 0 0 20px color-mix(in srgb, var(--brand) 65%, transparent);
+}
+
+.day-orbit__moon {
+  background: var(--paper);
+  box-shadow: -0.34rem 0.04rem 0 -0.02rem var(--sky-bottom);
+}
+
+.page-progress {
+  position: fixed;
+  z-index: var(--z-progress);
+  inset: 0 0 auto;
+  height: 4px;
+  pointer-events: none;
+}
+
+.page-progress__fill {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: left center;
+  background: var(--brand);
+}
+
+.back-to-start {
+  position: fixed;
+  z-index: var(--z-floating);
+  right: 1.2rem;
+  bottom: 1rem;
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 0.8rem;
+  transform: translateY(0.6rem);
+  border: 1px solid var(--brand);
+  background: var(--paper);
+  box-shadow: 0 4px 12px rgb(58 31 18 / 16%);
+  color: #781418;
+  font-size: 0.78rem;
+  font-weight: 700;
+  opacity: 0;
+  pointer-events: none;
+  text-decoration: none;
+  transition: opacity 160ms ease-out, transform 160ms ease-out;
+}
+
+.back-to-start.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.quiz {
+  padding-block: clamp(4.5rem, 9vw, 8rem);
+  background: var(--paper);
+  color: #3a1f12;
+}
+
+.quiz__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(22rem, 1fr);
+  align-items: center;
+  gap: clamp(2rem, 6vw, 6rem);
+}
+
+.quiz__eyebrow,
+.quiz__step {
+  margin: 0;
+  color: var(--brand-ink);
+  font-family: var(--mono-font);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.quiz__eyebrow span {
+  padding-inline: 0.35rem;
+}
+
+.quiz__title {
+  max-width: 18rem;
+  margin: 0.8rem 0 0;
+  color: #3a1f12;
+  font-family: var(--display-font);
+  font-size: clamp(2.8rem, 5.6vw, 5.5rem);
+  font-weight: 700;
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+}
+
+.quiz__best {
+  margin: 1.25rem 0 0;
+  color: #5a4034;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.quiz__ticket {
+  position: relative;
+  padding: clamp(1.35rem, 3vw, 2.3rem);
+  border-block: 1px dashed var(--paper-edge);
+  background-color: #fffdf7;
+  background-image: radial-gradient(circle at 0 50%, transparent 0 8px, #fffdf7 8.5px), radial-gradient(circle at 100% 50%, transparent 0 8px, #fffdf7 8.5px);
+  background-position: left center, right center;
+  background-size: 18px 18px;
+  box-shadow: 0 12px 28px rgb(58 31 18 / 9%);
+}
+
+.quiz__ticket::after {
+  position: absolute;
+  inset: 0.65rem;
+  border: 1px dashed var(--paper-edge);
+  content: "";
+  pointer-events: none;
+}
+
+.quiz__step,
+.quiz__fieldset,
+.quiz__feedback,
+.quiz__submit {
+  position: relative;
+  z-index: var(--z-content);
+}
+
+.quiz__fieldset {
+  min-width: 0;
+  margin: 1.1rem 0 0;
+  padding: 0;
+  border: 0;
+}
+
+.quiz__question {
+  margin: 0 0 0.9rem;
+  color: #3a1f12;
+  font-family: var(--display-font);
+  font-size: clamp(1.3rem, 2.3vw, 1.8rem);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.quiz__options {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.quiz__option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+}
+
+.quiz__radio {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+  margin-top: 0.25rem;
+  accent-color: var(--accent);
+}
+
+.quiz__radio:focus-visible + .quiz__option-label {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.quiz__option-label {
+  color: #3a1f12;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.quiz__feedback {
+  min-height: 1.65rem;
+  margin: 0.9rem 0 0;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.quiz__feedback.is-correct {
+  color: #205b38;
+}
+
+.quiz__feedback.is-wrong {
+  color: #8f1a1e;
+}
+
+.quiz__submit,
+.quiz__retry,
+.quiz__return {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.quiz__submit:hover,
+.quiz__retry:hover,
+.quiz__return:hover {
+  background: #10356f;
+  color: #fff;
+}
+
+.quiz__modal {
+  --bs-modal-color: #3a1f12;
+  --bs-modal-bg: var(--paper);
+}
+
+.quiz__modal-content {
+  border: 1px dashed var(--paper-edge);
+  border-radius: 0;
+  background: var(--paper);
+  box-shadow: 0 18px 55px rgb(12 24 48 / 28%);
+}
+
+.quiz__modal-header,
+.quiz__modal-footer {
+  border-color: var(--paper-edge);
+}
+
+.quiz__modal-title {
+  color: #3a1f12;
+  font-family: var(--display-font);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.quiz__result-score {
+  margin: 0;
+  color: var(--brand-ink);
+  font-family: var(--mono-font);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.quiz__result-message {
+  margin: 0.75rem 0 0;
+  color: #3a1f12;
+  font-size: 0.95rem;
+}
+
+.quiz__best--modal {
+  margin-top: 0.75rem;
+}
+
+.quiz__modal-footer {
+  gap: 0.6rem;
+}
+
+.quiz__retry,
+.quiz__return {
+  min-height: 42px;
+}
+
+.quiz__retry {
+  font-family: var(--body-font);
+}
+
+.quiz__return {
+  background: transparent;
+  color: var(--accent);
+}
+
+.quiz__return:hover {
+  color: #fff;
+}
+
+html[data-tone="dark"] .day-orbit__track {
+  border-color: rgb(244 241 232 / 70%);
+}
+
+@media (min-width: 1400px) {
+  .day-clock {
+    right: max(calc((100vw - 1320px) / 2), 1rem);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .day-clock {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: fit-content;
+    margin: 0 auto 1.25rem;
+  }
+
+  .quiz__inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .quiz__title {
+    max-width: none;
+  }
+
+  .day-orbit {
+    bottom: 0.65rem;
+    left: 0.55rem;
+    width: 6.6rem;
+    height: 3.9rem;
+  }
+
+  .day-orbit__sun,
+  .day-orbit__moon {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+
+  .back-to-start {
+    right: 0.65rem;
+    bottom: 0.65rem;
+    min-height: 42px;
+    padding-inline: 0.65rem;
+  }
+
+  .quiz__ticket {
+    padding-bottom: 4.5rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .day-clock {
+    margin-bottom: 0.75rem;
+    padding: 0.35rem 0.45rem 0.4rem;
+  }
+
+  .day-clock__label {
+    font-size: 0.64rem;
+  }
+
+  .day-clock__digit {
+    width: 1.22rem;
+    height: 1.55rem;
+    font-size: 1rem;
+  }
+
+  .day-clock__separator {
+    font-size: 0.95rem;
+  }
+
+  .day-orbit {
+    bottom: 0.55rem;
+    left: 0.45rem;
+    width: 6.6rem;
+    height: 3.9rem;
+  }
+
+  .day-orbit__sun,
+  .day-orbit__moon {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+
+  .back-to-start {
+    right: 0.55rem;
+    bottom: 0.55rem;
+    min-height: 40px;
+    padding-inline: 0.6rem;
+    font-size: 0.7rem;
+  }
+
+  .scene__paper {
+    padding-bottom: 4.5rem;
+  }
+
+  .quiz__ticket {
+    padding: 1.5rem 1.15rem 4.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .day-orbit {
+    display: none;
+  }
+
+  .day-clock__digit.is-flipping {
+    animation: none;
+  }
+
+  .back-to-start {
+    transition: none;
+  }
+}
