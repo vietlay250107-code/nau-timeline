@@ -54,11 +54,6 @@
     padding-top: 0.25rem;
   }
 
-  .scene__ticket::before {
-    left: -0.65rem;
-    width: 3.6rem;
-  }
-
   .scene__backdrop-time {
     top: 1rem;
     left: -0.6rem;
