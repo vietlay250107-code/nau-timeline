@@ -1,9 +1,12 @@
 # NAU Timeline — Một ngày ở Trường Đại học Nghệ An
 
-**NAU Timeline** là một dự án website tĩnh được thực hiện cho môn học **Thiết kế Web**. Trang web kể lại nhịp sinh hoạt quen thuộc của sinh viên Trường Đại học Nghệ An (NAU) thông qua **8 mốc giờ** trong ngày, từ 06:00 sáng đến 22:00 đêm.
+**NAU Timeline** là một dự án website tĩnh được thực hiện cho môn học **Thiết kế web**, Khoa Công nghệ Thông tin, Trường Đại học Nghệ An. Trang web kể lại nhịp sinh hoạt quen thuộc của sinh viên Trường Đại học Nghệ An (NAU) thông qua **8 mốc giờ** trong ngày, từ 06:00 sáng đến 22:00 đêm.
+
+*   **Website trực tuyến:** [https://vietlay250107-code.github.io/nau-timeline/](https://vietlay250107-code.github.io/nau-timeline/)
+*   **Kho mã nguồn:** [https://github.com/vietlay250107-code/nau-timeline](https://github.com/vietlay250107-code/nau-timeline)
 
 ### 🌟 Điểm nổi bật của dự án
-*   **Giao diện thay đổi theo thời gian thực:** Màu sắc bầu trời (biến `--sky-top`, `--sky-bottom`) tự động chuyển đổi mượt mà từ sắc sáng sớm, nắng trưa, hoàng hôn đến nền đêm tối dựa trên vị trí cuộn trang của người dùng (`sky.js`).
+*   **Giao diện thay đổi theo thời gian thực:** Màu sắc bầu trời (biến `--sky-top`, `--sky-bottom`) chuyển đổi theo từng mốc giờ khi người dùng cuộn tới cảnh tương ứng, với hiệu ứng chuyển màu 800ms (`sky.js`).
 *   **Đồng hồ lật số & Thiên thể:** Đồng hồ ở góc phải tự động lật số theo từng mốc giờ (`clock.js`). Đồng thời, mặt trời và mặt trăng ở góc trái cũng di chuyển theo tiến độ cuộn trang (`orb.js`).
 *   **Tương tác đa dạng:** Tích hợp bài trắc nghiệm ngắn (Quiz) gồm 3 câu hỏi giúp người xem kiểm tra lại trí nhớ về hành trình (`quiz.js`).
 *   **Thiết kế Responsive:** Sử dụng Bootstrap 5 kết hợp CSS tùy chỉnh để hiển thị tốt trên mọi kích thước màn hình.
@@ -18,8 +21,8 @@
 ### 📁 Cấu trúc thư mục
 ```text
 ├── assets/
-│   ├── img/       # Hình ảnh cho các mốc thời gian và bản đồ
-│   └── logo/      # Logo trường NAU
+│   ├── img/       # Hình ảnh đã tối ưu cho các mốc thời gian, bản đồ và ảnh xem trước
+│   └── logo/      # Logo trường NAU và thư mục archive/ lưu bản gốc
 ├── css/
 │   ├── style.css        # Style chung toàn trang
 │   ├── core.css         # Style cho đồng hồ, tiến trình, quiz
@@ -34,4 +37,6 @@
 │   ├── quiz.js      # Xử lý bài trắc nghiệm
 │   └── gioi-thieu.js # Xử lý hiệu ứng reveal
 ├── index.html       # Trang chủ (Dòng thời gian)
-└── ban-do.html      # Trang bản đồ khuôn viên
+├── ban-do.html      # Trang bản đồ khuôn viên
+└── 404.html         # Trang thông báo lỗi 404
+```
