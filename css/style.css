@@ -548,31 +548,31 @@ html[data-tone="dark"] .home-hero__meta span:first-child {
 }
 
 .scene--dawn .scene__photo {
-  aspect-ratio: 1856 / 2304;
+  aspect-ratio: 800 / 993;
 }
 
 .scene--late-morning .scene__photo {
-  aspect-ratio: 1000 / 750;
+  aspect-ratio: 800 / 600;
 }
 
 .scene--evening .scene__photo {
-  aspect-ratio: 2048 / 1153;
+  aspect-ratio: 800 / 450;
 }
 
 .scene--night .scene__photo {
-  aspect-ratio: 2048 / 1536;
+  aspect-ratio: 800 / 600;
 }
 
 .scene--blue-hour .scene__photo {
-  aspect-ratio: 2560 / 1707;
+  aspect-ratio: 800 / 533;
 }
 
 .scene--noon .scene__photo {
-  aspect-ratio: 1920 / 2560;
+  aspect-ratio: 800 / 1067;
 }
 
 .scene--afternoon .scene__photo {
-  aspect-ratio: 1200 / 674;
+  aspect-ratio: 800 / 449;
 }
 
 .scene__placeholder::before {
