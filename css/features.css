@@ -2,7 +2,7 @@
   position: fixed;
   z-index: 30;
   top: calc(50% + 3rem);
-  right: max(0.55rem, calc((100vw - 1420px) / 2));
+  right: max(1.5rem, calc((100vw - 1420px) / 2));
   display: grid;
   gap: 0.25rem;
   transform: translate(0.45rem, -50%);
@@ -74,7 +74,8 @@
 }
 
 .dot-nav__button:hover .dot-nav__label,
-.dot-nav__button:focus-visible .dot-nav__label {
+.dot-nav__button:focus .dot-nav__label,
+.dot-nav__label--visible {
   transform: translateY(-50%) translateX(0);
   opacity: 1;
 }
@@ -82,7 +83,7 @@
 @media (max-width: 767.98px) {
   .dot-nav {
     top: calc(50% + 1rem);
-    right: 0.25rem;
+    right: 1.2rem;
     gap: 0.12rem;
   }
 
@@ -174,6 +175,201 @@
 @media (prefers-reduced-motion: reduce) {
   .tour-control,
   .tour-notice {
+    transition: none;
+  }
+}
+
+.ticket-maker {
+  padding-block: clamp(4.5rem, 9vw, 8rem);
+  background: color-mix(in srgb, var(--paper) 88%, var(--sky-bottom));
+  color: #3a1f12;
+}
+
+.ticket-maker__container {
+  max-width: 1140px;
+}
+
+.ticket-maker__header {
+  max-width: 760px;
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+.ticket-maker__eyebrow {
+  margin-bottom: 0.7rem;
+}
+
+.ticket-maker__title {
+  max-width: none;
+  margin: 0;
+  font-size: clamp(2.6rem, 5.4vw, 5rem);
+}
+
+.ticket-maker__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: start;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+}
+
+.ticket-maker__form {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+}
+
+.ticket-maker__field {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.ticket-maker__label {
+  color: #3a1f12;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.ticket-maker__label span {
+  color: #5a4034;
+  font-size: 0.76rem;
+  font-weight: 400;
+}
+
+.ticket-maker__input {
+  width: 100%;
+  min-height: 48px;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--paper-edge);
+  border-radius: 0;
+  background: #fffdf7;
+  color: #3a1f12;
+  font: inherit;
+  font-size: 0.9rem;
+}
+
+.ticket-maker__input:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.ticket-maker__message {
+  min-height: 7rem;
+  resize: vertical;
+}
+
+.ticket-maker__help,
+.ticket-maker__counter,
+.ticket-maker__hint,
+.ticket-maker__error,
+.ticket-maker__notice {
+  margin: 0;
+  color: #5a4034;
+  font-size: 0.76rem;
+  line-height: 1.55;
+}
+
+.ticket-maker__counter {
+  justify-self: end;
+  font-family: var(--mono-font);
+  font-size: 0.7rem;
+}
+
+.ticket-maker__error {
+  min-height: 1.15em;
+  color: #8f1a1e;
+  font-weight: 700;
+}
+
+.ticket-maker__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 0.2rem;
+}
+
+.ticket-maker__button {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 0.85rem;
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  font-family: var(--body-font);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ticket-maker__button--primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.ticket-maker__button--primary:hover {
+  background: #10356f;
+  color: #fff;
+}
+
+.ticket-maker__button--secondary:hover {
+  background: #fffdf7;
+}
+
+.ticket-maker__button:disabled {
+  border-color: #998d79;
+  background: #e8ddc7;
+  color: #66584a;
+  cursor: not-allowed;
+}
+
+.ticket-maker__button[hidden] {
+  display: none !important;
+}
+
+.ticket-maker__hint {
+  color: var(--brand-ink);
+  font-weight: 700;
+}
+
+.ticket-maker__preview.about__ticket {
+  width: min(100%, 540px);
+  min-height: 0;
+  align-self: start;
+  gap: 0.8rem;
+  padding: clamp(0.8rem, 2.5vw, 1.4rem);
+}
+
+.ticket-maker__canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  border: 1px dashed var(--paper-edge);
+  background: var(--paper);
+}
+
+.ticket-maker__caption {
+  position: relative;
+  z-index: var(--z-content);
+  color: #5a4034;
+  font-size: 0.72rem;
+  line-height: 1.55;
+  text-align: center;
+}
+
+@media (max-width: 767.98px) {
+  .ticket-maker__layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ticket-maker__preview.about__ticket {
+    width: min(100%, 460px);
+    justify-self: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticket-maker__button {
     transition: none;
   }
 }

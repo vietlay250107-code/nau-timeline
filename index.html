@@ -43,6 +43,7 @@
             <ul class="navbar-nav ms-auto align-items-lg-center">
               <li class="nav-item"><a class="nav-link site-nav__link" href="#top">Giới thiệu</a></li>
               <li class="nav-item"><a class="nav-link site-nav__link" href="ban-do.html#ban-do">Trường tôi</a></li>
+              <li class="nav-item"><a class="nav-link site-nav__link" href="#tao-ve">Tạo vé</a></li>
             </ul>
           </div>
         </div>
@@ -288,6 +289,45 @@
         </div>
       </section>
 
+      <section class="ticket-maker about__reveal" id="tao-ve" aria-labelledby="ticket-maker-title">
+        <div class="container ticket-maker__container">
+          <header class="ticket-maker__header">
+            <p class="quiz__eyebrow ticket-maker__eyebrow">Cuối ngày <span aria-hidden="true">/</span> Vé của riêng bạn</p>
+            <h2 class="quiz__title ticket-maker__title" id="ticket-maker-title">Tạo vé ngày học của bạn</h2>
+          </header>
+          <div class="ticket-maker__layout">
+            <form class="ticket-maker__form" id="ticket-form" novalidate>
+              <div class="ticket-maker__field">
+                <label class="ticket-maker__label" for="ticket-name">Tên của bạn</label>
+                <input class="ticket-maker__input" id="ticket-name" name="name" type="text" maxlength="30" autocomplete="name" required aria-describedby="ticket-name-error">
+                <p class="ticket-maker__error" id="ticket-name-error" role="alert"></p>
+              </div>
+              <div class="ticket-maker__field">
+                <label class="ticket-maker__label" for="ticket-hour">Mốc giờ yêu thích</label>
+                <select class="ticket-maker__input" id="ticket-hour" name="favorite-hour" required aria-describedby="ticket-hour-help"></select>
+                <p class="ticket-maker__help" id="ticket-hour-help">Chọn một khoảnh khắc trong ngày ở NAU.</p>
+              </div>
+              <div class="ticket-maker__field">
+                <label class="ticket-maker__label" for="ticket-message">Lời nhắn <span>(tối đa 60 ký tự)</span></label>
+                <textarea class="ticket-maker__input ticket-maker__message" id="ticket-message" name="message" maxlength="60" rows="3" aria-describedby="ticket-message-count"></textarea>
+                <p class="ticket-maker__counter" id="ticket-message-count" aria-live="polite">0/60 ký tự</p>
+              </div>
+              <div class="ticket-maker__actions">
+                <button class="ticket-maker__button ticket-maker__button--secondary" id="ticket-code-change" type="button">Đổi mã</button>
+                <button class="ticket-maker__button ticket-maker__button--primary" id="ticket-download" type="button" disabled>Tải vé về</button>
+                <button class="ticket-maker__button ticket-maker__button--secondary" id="ticket-share" type="button" hidden>Chia sẻ</button>
+              </div>
+              <p class="ticket-maker__hint" id="ticket-download-hint">Nhập tên để nhận vé.</p>
+              <p class="ticket-maker__notice" id="ticket-status" role="status" aria-live="polite"></p>
+            </form>
+            <figure class="ticket-maker__preview about__ticket">
+              <canvas class="ticket-maker__canvas" id="ticket-canvas" width="1080" height="1350" role="img" aria-label="Bản xem trước vé ngày học của bạn">Trình duyệt này chưa hỗ trợ xem trước bằng canvas.</canvas>
+              <figcaption class="ticket-maker__caption">Vé được vẽ riêng cho bạn và tải về dưới dạng ảnh PNG.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
       <div class="modal fade quiz__modal" id="quiz-result" tabindex="-1" aria-labelledby="quiz-result-title" aria-describedby="quiz-result-score">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content quiz__modal-content">
@@ -517,6 +557,7 @@
         <nav class="site-footer__nav" aria-label="Điều hướng chân trang">
           <a href="#top">Giới thiệu</a>
           <a href="ban-do.html#ban-do">Trường tôi</a>
+          <a href="#tao-ve">Tạo vé</a>
         </nav>
       </div>
     </footer>
@@ -541,6 +582,7 @@
     <script src="js/quiz.js" defer></script>
     <script src="js/dot-nav.js" defer></script>
     <script src="js/tour.js" defer></script>
+    <script src="js/ticket.js" defer></script>
     <script src="js/gioi-thieu.js" defer></script>
   </body>
 </html>
