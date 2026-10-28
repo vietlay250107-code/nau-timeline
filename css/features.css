@@ -1,0 +1,112 @@
+.dot-nav {
+  position: fixed;
+  z-index: 30;
+  top: calc(50% + 3rem);
+  right: max(0.55rem, calc((100vw - 1420px) / 2));
+  display: grid;
+  gap: 0.25rem;
+  transform: translate(0.45rem, -50%);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease-out, transform 180ms ease-out, visibility 180ms;
+}
+
+.dot-nav.is-visible {
+  transform: translate(0, -50%);
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.dot-nav__button {
+  position: relative;
+  display: grid;
+  width: 2.3rem;
+  min-height: 2.3rem;
+  place-items: center;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background: transparent;
+  color: #3a1f12;
+  cursor: pointer;
+}
+
+.dot-nav__button:hover,
+.dot-nav__button--active {
+  border-color: var(--paper-edge);
+  background: var(--paper);
+}
+
+.dot-nav__dot {
+  width: 0.62rem;
+  height: 0.62rem;
+  border: 1px solid var(--brand);
+  border-radius: 50%;
+  background: var(--sky-bottom);
+  transition: background-color 180ms ease-out, transform 180ms ease-out;
+}
+
+.dot-nav__button--active .dot-nav__dot {
+  transform: scale(1.2);
+  background: var(--sky-top);
+}
+
+.dot-nav__label {
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 0.45rem);
+  width: max-content;
+  max-width: 13rem;
+  transform: translateY(-50%) translateX(0.25rem);
+  padding: 0.35rem 0.55rem;
+  border: 1px dashed var(--paper-edge);
+  background: var(--paper);
+  box-shadow: 0 4px 12px rgb(58 31 18 / 12%);
+  color: #3a1f12;
+  font-family: var(--mono-font);
+  font-size: 0.65rem;
+  line-height: 1.4;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 120ms ease-out, transform 120ms ease-out;
+}
+
+.dot-nav__button:hover .dot-nav__label,
+.dot-nav__button:focus-visible .dot-nav__label {
+  transform: translateY(-50%) translateX(0);
+  opacity: 1;
+}
+
+@media (max-width: 767.98px) {
+  .dot-nav {
+    top: calc(50% + 1rem);
+    right: 0.25rem;
+    gap: 0.12rem;
+  }
+
+  .dot-nav__button {
+    width: 2rem;
+    min-height: 2rem;
+  }
+
+  .dot-nav__dot {
+    width: 0.52rem;
+    height: 0.52rem;
+  }
+
+  .dot-nav__label {
+    right: calc(100% + 0.3rem);
+    max-width: min(12rem, calc(100vw - 3.25rem));
+    font-size: 0.62rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dot-nav,
+  .dot-nav__dot,
+  .dot-nav__label {
+    transition: none;
+  }
+}
