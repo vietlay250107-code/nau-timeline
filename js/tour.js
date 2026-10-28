@@ -143,9 +143,13 @@
     });
 
     if ("IntersectionObserver" in window) {
+      const nearRegions = new Set();
       const regionObserver = new IntersectionObserver((entries) => {
-        const isNearTimeline = entries.some((entry) => entry.isIntersecting);
-        setButtonVisibility(isNearTimeline);
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) nearRegions.add(entry.target);
+          else nearRegions.delete(entry.target);
+        });
+        setButtonVisibility(nearRegions.size > 0);
       }, { rootMargin: "120px 0px 120px 0px", threshold: 0 });
       regionObserver.observe(hero);
       regionObserver.observe(timeline);

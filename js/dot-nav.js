@@ -34,6 +34,9 @@
       button.append(dot, text);
       nav.append(button);
 
+      button.addEventListener("focus", () => text.classList.add("dot-nav__label--visible"));
+      button.addEventListener("blur", () => text.classList.remove("dot-nav__label--visible"));
+
       button.addEventListener("click", () => {
         if (!scene.isConnected) return;
         scene.scrollIntoView({
