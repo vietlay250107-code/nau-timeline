@@ -528,6 +528,9 @@
     </div>
     <div class="page-progress" aria-hidden="true"><span class="page-progress__fill"></span></div>
     <a class="back-to-start" href="#top" aria-label="Về mốc 06:00">Về 06:00</a>
+    <button class="tour-control" id="tour-control" type="button" aria-pressed="false" aria-label="Bắt đầu dẫn tour tự động qua tám mốc giờ" hidden>▶ Dẫn tour</button>
+    <p class="tour-control__status visually-hidden" id="tour-status" aria-live="polite"></p>
+    <p class="tour-notice" id="tour-notice" aria-hidden="true" hidden>Hết một ngày ở NAU</p>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
     <script src="js/nav.js" defer></script>
@@ -537,6 +540,7 @@
     <script src="js/progress.js" defer></script>
     <script src="js/quiz.js" defer></script>
     <script src="js/dot-nav.js" defer></script>
+    <script src="js/tour.js" defer></script>
     <script src="js/gioi-thieu.js" defer></script>
   </body>
 </html>
