@@ -179,7 +179,7 @@
   font-family: var(--display-font);
   font-size: clamp(2.8rem, 5.6vw, 5.5rem);
   font-weight: 700;
-  letter-spacing: -0.055em;
+  letter-spacing: -0.03em;
   line-height: 0.98;
 }
 

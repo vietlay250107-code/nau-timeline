@@ -113,7 +113,8 @@
 
     function handleManualInput(event) {
       if (!running) return;
-      if (event.type === "pointerdown" && button.contains(event.target)) return;
+      if ((event.type === "pointerdown" || event.type === "touchstart")
+        && button.contains(event.target)) return;
       if (event.type === "keydown") {
         const manualKeys = ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "PageUp", "PageDown", "Home", "End", " ", "Space", "Spacebar"];
         if (!manualKeys.includes(event.key)) return;

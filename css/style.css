@@ -34,7 +34,7 @@
   --z-header: 100;
   --z-progress: 110;
   --z-skip-link: 1200;
-  --display-font: "Bricolage Grotesque", "Be Vietnam Pro", sans-serif;
+  --display-font: "Be Vietnam Pro", sans-serif;
   --body-font: "Be Vietnam Pro", sans-serif;
   --mono-font: "Roboto Mono", monospace;
   --bs-body-font-family: var(--body-font);
@@ -221,8 +221,8 @@ html[data-tone="dark"] .home-hero__meta span:first-child {
   font-family: var(--display-font);
   font-size: clamp(4.8rem, 11vw, 10rem);
   font-weight: 700;
-  letter-spacing: -0.075em;
-  line-height: 0.84;
+  letter-spacing: -0.045em;
+  line-height: 0.9;
   word-spacing: 0.12em;
 }
 
@@ -445,7 +445,7 @@ html[data-tone="dark"] .home-hero__meta span:first-child {
   font-family: var(--display-font);
   font-size: clamp(2.5rem, 4.3vw, 4.6rem);
   font-weight: 700;
-  letter-spacing: -0.055em;
+  letter-spacing: -0.035em;
   line-height: 0.98;
   word-spacing: 0.12em;
 }

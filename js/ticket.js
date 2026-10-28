@@ -30,6 +30,7 @@
     let touchedName = false;
     let renderTimer = null;
     let renderVersion = 0;
+    let renderReady = false;
 
     // Đồng bộ với palettes trong js/sky.js; sky.js chưa công khai bảng màu ra DOM.
     const skyPalettes = {
@@ -100,8 +101,8 @@
       } else {
         nameError.textContent = "";
       }
-      downloadButton.disabled = !valid || !context;
-      if (shareButton) shareButton.disabled = !valid || !context;
+      downloadButton.disabled = !valid || !context || !renderReady;
+      if (shareButton) shareButton.disabled = !valid || !context || !renderReady;
       downloadHint.textContent = valid ? "" : "Nhập tên để nhận vé.";
       return valid;
     }
@@ -130,7 +131,7 @@
     function loadFonts() {
       if (!document.fonts || typeof document.fonts.load !== "function") return Promise.resolve();
       const requests = [
-        '700 80px "Bricolage Grotesque"',
+        '700 80px "Be Vietnam Pro"',
         '400 30px "Be Vietnam Pro"',
         '500 24px "Roboto Mono"'
       ];
@@ -301,7 +302,7 @@
       context.fillStyle = "#8f1a1e";
       context.textAlign = "right";
       context.textBaseline = "alphabetic";
-      context.font = '700 36px "Bricolage Grotesque", sans-serif';
+      context.font = '700 36px "Be Vietnam Pro", sans-serif';
       context.fillText("VÉ NGÀY HỌC", 976, 150);
       context.font = '500 22px "Roboto Mono", monospace';
       context.fillStyle = "#5a4034";
@@ -313,14 +314,14 @@
       context.fillText("VÉ CỦA RIÊNG BẠN", 104, 260);
 
       const displayName = name || "Tên của bạn";
-      const nameSize = fitFontSize(context, displayName, "Bricolage Grotesque", 700, 870, 86, 48);
+      const nameSize = fitFontSize(context, displayName, "Be Vietnam Pro", 700, 870, 86, 48);
       context.fillStyle = name ? "#3a1f12" : "#857565";
       context.fillText(displayName, 104, 344, 870);
       context.fillStyle = "#ae1f24";
       context.fillRect(104, 371, Math.min(230, nameSize * 2.6), 5);
 
       const sceneLabel = scene ? `${scene.hour} · ${scene.title}` : "Chưa có mốc giờ";
-      const sceneSize = fitFontSize(context, sceneLabel, "Bricolage Grotesque", 700, 872, 44, 30);
+      const sceneSize = fitFontSize(context, sceneLabel, "Be Vietnam Pro", 700, 872, 44, 30);
       context.fillStyle = "#3a1f12";
       context.fillText(sceneLabel, 104, 425, 872);
 
@@ -404,7 +405,11 @@
         if (!logo) problems.push("Logo NAU chưa tải được, vé đang dùng ô thay thế.");
         if (scene && !photo) problems.push("Ảnh mốc giờ chưa tải được, vé đang dùng ô màu thay thế.");
         setStatus(problems.join(" "));
+        renderReady = true;
+        updateNameState();
       } catch (error) {
+        renderReady = false;
+        updateNameState();
         setStatus("Chưa thể vẽ vé. Hãy thử tải lại trang.");
       }
     }
@@ -412,6 +417,9 @@
     function scheduleRender() {
       if (renderTimer !== null) window.clearTimeout(renderTimer);
       const version = ++renderVersion;
+      renderReady = false;
+      updateNameState();
+      if (nameInput.value.trim()) downloadHint.textContent = "Đang cập nhật vé…";
       renderTimer = window.setTimeout(() => {
         renderTimer = null;
         renderTicket(version).catch(() => setStatus("Chưa thể vẽ vé. Hãy thử tải lại trang."));

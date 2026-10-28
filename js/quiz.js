@@ -176,7 +176,14 @@
   });
 
   if (retryButton) retryButton.addEventListener("click", resetQuiz);
-  if (modalElement) modalElement.addEventListener("hidden.bs.modal", resetQuiz);
+  if (modalElement) {
+    modalElement.addEventListener("keydown", (event) => {
+      if (event.key !== "Escape" || !modal || !modalElement.classList.contains("show")) return;
+      event.preventDefault();
+      modal.hide();
+    });
+    modalElement.addEventListener("hidden.bs.modal", resetQuiz);
+  }
 
   showBestScore();
   renderQuestion();
