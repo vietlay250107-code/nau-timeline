@@ -8,14 +8,12 @@
     const messageCount = document.querySelector("#ticket-message-count");
     const canvas = document.querySelector("#ticket-canvas");
     const downloadButton = document.querySelector("#ticket-download");
-    const changeCodeButton = document.querySelector("#ticket-code-change");
     const shareButton = document.querySelector("#ticket-share");
     const downloadHint = document.querySelector("#ticket-download-hint");
     const status = document.querySelector("#ticket-status");
 
     if (!form || !nameInput || !nameError || !hourSelect || !messageInput
-      || !messageCount || !canvas || !downloadButton || !changeCodeButton
-      || !downloadHint || !status) return;
+      || !messageCount || !canvas || !downloadButton || !downloadHint || !status) return;
 
     let context = null;
     try {
@@ -494,12 +492,6 @@
     });
     messageInput.addEventListener("input", () => {
       updateMessageCount();
-      scheduleRender();
-    });
-    changeCodeButton.addEventListener("click", () => {
-      const scene = selectedScene();
-      if (!scene) return;
-      ticketCodes.set(scene.key, `NAU-${scene.hour.replace(":", "")}-${makeRandomCode()}`);
       scheduleRender();
     });
     form.addEventListener("submit", (event) => {
