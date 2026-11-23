@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mốc thời gian – NAU Timeline</title>
+  <link rel="icon" type="image/png" href="./assets/logo/nau-logo.png">
+  <link rel="stylesheet" href="./assets/vendor/bootstrap-5.3/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/scripts.js" defer></script>
+</head>
+<body class="site-page">
+  <header class="site-header">
+    <nav class="site-container site-nav navbar navbar-expand-lg" aria-label="Điều hướng chính">
+      <a class="brand" href="./index.html" aria-label="Trang chủ NAU Timeline">
+        <img src="./assets/logo/nau-logo.png" alt="Logo NAU">
+        <span class="brand-name">Nghe An University</span>
+      </a>
+      <div class="desktop-menu">
+        <a href="./index.html">Trang chủ</a>
+        <a href="./moc-thoi-gian.html" aria-current="page">Mốc thời gian</a>
+        <a href="./nha-phat-trien.html">Giới thiệu</a>
+      </div>
+      <div class="mobile-menu">
+        <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-label="Mở menu" aria-controls="mobile-menu-panel">
+          <span class="hamburger" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+        <div class="mobile-menu-panel" id="mobile-menu-panel">
+          <a href="./index.html">Trang chủ</a>
+          <a href="./moc-thoi-gian.html" aria-current="page">Mốc thời gian</a>
+          <a href="./nha-phat-trien.html">Giới thiệu</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="site-container page-main timeline-main">
+    <h1>Mốc thời gian</h1>
+    <form class="creator-panel" aria-label="Thẻ timeline">
+      <div class="creator-panel__header">
+        <h2 class="creator-panel__title">Thẻ timeline</h2>
+        <img class="creator-panel__logo" src="./assets/logo/nau-logo.png" alt="Logo NAU">
+      </div>
+      <div class="row g-3">
+        <div class="col-12 col-md-6">
+          <label class="field-label" for="visitor-name">Tên của bạn</label>
+          <input class="mockup-input" id="visitor-name" type="text" maxlength="60" placeholder="Nhập tên">
+        </div>
+        <div class="col-12 col-md-6">
+          <label class="field-label" for="time-select">Chọn mốc thời gian</label>
+          <select class="mockup-input" id="time-select" required>
+            <option value="">Chọn mốc thời gian</option>
+            <option value="0630">06:30</option>
+            <option value="0900">09:00</option>
+            <option value="1200">12:00</option>
+            <option value="1530">15:30</option>
+            <option value="1900">19:00</option>
+          </select>
+        </div>
+        <div class="col-12 col-md-6">
+          <label class="field-label" for="photo-select">Chọn ảnh</label>
+          <select class="mockup-input" id="photo-select" required disabled>
+            <option value="">Chọn ảnh</option>
+          </select>
+        </div>
+        <div class="col-12 col-md-6">
+          <label class="field-label" for="visitor-note">Ghi chú</label>
+          <textarea class="mockup-input" id="visitor-note" maxlength="300" placeholder="Nhập ghi chú"></textarea>
+        </div>
+      </div>
+      <div class="form-actions">
+        <button class="button button-primary" id="save-image" type="button">Lưu ảnh</button>
+        <button class="button button-outline" id="share-image" type="button">Chia sẻ</button>
+      </div>
+      <p class="save-error" id="save-error" role="alert" hidden></p>
+    </form>
+    <section class="time-group" aria-labelledby="time-0630">
+      <h2 id="time-0630">06:30</h2>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <a class="photo-card" data-time="0630" data-photo-id="0630-01" href="./anh.html?id=0630-01" aria-label="Xem chi tiết: Chào đón tân sinh viên Khoa Công nghệ thông tin">
+            <div class="photo-card__media"><img class="img-fluid" src="./assets/img/su-kien/0630/01.jpg" alt="Chào đón tân sinh viên Khoa Công nghệ thông tin"></div>
+            <p class="photo-card__event">Chào đón tân sinh viên Khoa Công nghệ thông tin</p>
+          </a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <a class="photo-card" data-time="0630" data-photo-id="0630-02" href="./anh.html?id=0630-02" aria-label="Xem chi tiết: Hội chợ chào tân sinh viên năm 2026">
+            <div class="photo-card__media"><img class="img-fluid" src="./assets/img/su-kien/0630/02.jpg" alt="Hội chợ chào tân sinh viên năm 2026"></div>
+            <p class="photo-card__event">Hội chợ chào tân sinh viên năm 2026</p>
+          </a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <a class="photo-card" data-time="0630" data-photo-id="0630-03" href="./anh.html?id=0630-03" aria-label="Xem chi tiết: Hội thảo hợp tác Trường Đại học Nghệ An với doanh nghiệp">
+            <div class="photo-card__media"><img class="img-fluid" src="./assets/img/su-kien/0630/03.jpg" alt="Hội thảo hợp tác Trường Đại học Nghệ An với doanh nghiệp"></div>
+            <p class="photo-card__event">Hội thảo hợp tác Trường Đại học Nghệ An với doanh nghiệp</p>
+          </a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <a class="photo-card" data-time="0630" data-photo-id="0630-04" href="./anh.html?id=0630-04" aria-label="Xem chi tiết: Lễ khai giảng lớp bồi dưỡng nhận thức về Đảng khóa VI năm 2026">
+            <div class="photo-card__media"><img class="img-fluid" src="./assets/img/su-kien/0630/04.jpg" alt="Lễ khai giảng lớp bồi dưỡng nhận thức về Đảng khóa VI năm 2026"></div>
+            <p class="photo-card__event">Lễ khai giảng lớp bồi dưỡng nhận thức về Đảng khóa VI năm 2026</p>
+          </a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <a class="photo-card" data-time="0630" data-photo-id="0630-05" href="./anh.html?id=0630-05" aria-label="Xem chi tiết: Talkshow Từ giảng đường đến hành trình khởi nghiệp">
+            <div class="photo-card__media"><img class="img-fluid" src="./assets/img/su-kien/0630/05.jpg" alt="Talkshow Từ giảng đường đến hành trình khởi nghiệp"></div>
+            <p class="photo-card__event">Talkshow Từ giảng đường đến hành trình khởi nghiệp</p>
+          </a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <a class="photo-card" data-time="0630" data-photo-id="0630-06" href="./anh.html?id=0630-06" aria-label="Xem chi tiết: Sinh viên mang hành lý qua đường">
+            <div class="photo-card__media"><img class="img-fluid" src="./assets/img/su-kien/0630/06.jpg" alt="Sinh viên mang hành lý qua đường"></div>
+            <p class="photo-card__event">Sinh viên mang hành lý qua đường</p>
+          </a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <a class="photo-card" data-time="0630" data-photo-id="0630-07" href="./anh.html?id=0630-07" aria-label="Xem chi tiết: Múa lân tại điểm check-in tân sinh viên NAU">
+            <div class="photo-card__media"><img class="img-fluid" src="./assets/img/su-kien/0630/07.jpg" alt="Múa lân tại điểm check-in tân sinh viên NAU"></div>
+            <p class="photo-card__event">Múa lân tại điểm check-in tân sinh viên NAU</p>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="time-group" aria-labelledby="time-0900">
+      <h2 id="time-0900">09:00</h2>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <a class="photo-card" data-time="0900" data-photo-id="0900-01" href="./anh.html?id=0900-01" aria-label="Xem chi tiết: Giải bóng chuyền nam, nữ sinh viên mở rộng năm 2026">
+            <div class="photo-card__media"><img class="img-fluid" src="./assets/img/su-kien/0900/01.jpg" alt="Giải bóng chuyền nam, nữ sinh viên mở rộng năm 2026"></div>
+            <p class="photo-card__event">Giải bóng chuyền nam, nữ sinh viên mở rộng năm 2026</p>
+          </a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <a class="photo-card" data-time="0900" data-photo-id="0900-02" href="./anh.html?id=0900-02" aria-label="Xem chi tiết: Hội thảo hợp tác đại học với doanh nghiệp và nhà tuyển dụng, Tiểu ban 3">
+            <div class="photo-card__media"><img class="img-fluid" src="./assets/img/su-kien/0900/02.jpg" alt="Hội thảo hợp tác đại học với doanh nghiệp và nhà tuyển dụng, Tiểu ban 3"></div>
+            <p class="photo-card__event">Hội thảo hợp tác đại học với doanh nghiệp và nhà tuyển dụng, Tiểu ban 3</p>
+          </a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <a class="photo-card" data-time="0900" data-photo-id="0900-03" href="./anh.html?id=0900-03" aria-label="Xem chi tiết: Sinh viên đọc sách trong không gian đọc">
+            <div class="photo-card__media"><img class="img-fluid" src="./assets/img/su-kien/0900/03.jpg" alt="Sinh viên đọc sách trong không gian đọc"></div>
+            <p class="photo-card__event">Sinh viên đọc sách trong không gian đọc</p>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="time-group" aria-labelledby="time-1200">
+      <h2 id="time-1200">12:00</h2>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <a class="photo-card" data-time="1200" data-photo-id="1200-01" href="./anh.html?id=1200-01" aria-label="Xem chi tiết: Một góc quán giờ nghỉ trưa">
+            <div class="photo-card__media"><img class="img-fluid" src="./assets/img/su-kien/1200/01.jpg" alt="Một góc quán giờ nghỉ trưa"></div>
+            <p class="photo-card__event">Một góc quán giờ nghỉ trưa</p>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="time-group" aria-labelledby="time-1530">
+      <h2 id="time-1530">15:30</h2>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <a class="photo-card" data-time="1530" data-photo-id="1530-01" href="./anh.html?id=1530-01" aria-label="Xem chi tiết: Trận bóng đá trên sân cỏ nhân tạo">
+            <div class="photo-card__media"><img class="img-fluid" src="./assets/img/su-kien/1530/01.jpg" alt="Trận bóng đá trên sân cỏ nhân tạo"></div>
+            <p class="photo-card__event">Trận bóng đá trên sân cỏ nhân tạo</p>
+          </a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <a class="photo-card" data-time="1530" data-photo-id="1530-02" href="./anh.html?id=1530-02" aria-label="Xem chi tiết: Refreshing Day: trò chơi vận động ngoài trời">
+            <div class="photo-card__media"><img class="img-fluid" src="./assets/img/su-kien/1530/02.jpg" alt="Refreshing Day: trò chơi vận động ngoài trời"></div>
+            <p class="photo-card__event">Refreshing Day: trò chơi vận động ngoài trời</p>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="time-group" aria-labelledby="time-1900">
+      <h2 id="time-1900">19:00</h2>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <a class="photo-card" data-time="1900" data-photo-id="1900-01" href="./anh.html?id=1900-01" aria-label="Xem chi tiết: Sinh viên học và làm việc với máy tính buổi tối">
+            <div class="photo-card__media"><img class="img-fluid" src="./assets/img/su-kien/1900/01.jpg" alt="Sinh viên học và làm việc với máy tính buổi tối"></div>
+            <p class="photo-card__event">Sinh viên học và làm việc với máy tính buổi tối</p>
+          </a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <a class="photo-card" data-time="1900" data-photo-id="1900-02" href="./anh.html?id=1900-02" aria-label="Xem chi tiết: Biển tên Trường Đại học Nghệ An về đêm">
+            <div class="photo-card__media"><img class="img-fluid" src="./assets/img/su-kien/1900/02.jpg" alt="Biển tên Trường Đại học Nghệ An về đêm"></div>
+            <p class="photo-card__event">Biển tên Trường Đại học Nghệ An về đêm</p>
+          </a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <a class="photo-card" data-time="1900" data-photo-id="1900-03" href="./anh.html?id=1900-03" aria-label="Xem chi tiết: Halloween Party NAU">
+            <div class="photo-card__media"><img class="img-fluid" src="./assets/img/su-kien/1900/03.jpg" alt="Halloween Party NAU"></div>
+            <p class="photo-card__event">Halloween Party NAU</p>
+          </a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <a class="photo-card" data-time="1900" data-photo-id="1900-04" href="./anh.html?id=1900-04" aria-label="Xem chi tiết: Đêm hội trăng rằm">
+            <div class="photo-card__media"><img class="img-fluid" src="./assets/img/su-kien/1900/04.jpg" alt="Đêm hội trăng rằm"></div>
+            <p class="photo-card__event">Đêm hội trăng rằm</p>
+          </a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <a class="photo-card" data-time="1900" data-photo-id="1900-05" href="./anh.html?id=1900-05" aria-label="Xem chi tiết: Đêm nhạc hội chào tân sinh viên năm 2026">
+            <div class="photo-card__media"><img class="img-fluid" src="./assets/img/su-kien/1900/05.jpg" alt="Đêm nhạc hội chào tân sinh viên năm 2026"></div>
+            <p class="photo-card__event">Đêm nhạc hội chào tân sinh viên năm 2026</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="site-container">
+      <div class="footer-brand">
+        <img class="footer-logo" src="./assets/logo/nau-logo.png" alt="">
+        <span class="brand-name">Nghe An University</span>
+      </div>
+      <div class="row g-4 footer-grid">
+        <div class="col-12 col-md-6 footer-info-column">
+          <section class="footer-card footer-info" aria-labelledby="footer-info-title">
+            <h2 id="footer-info-title">Thông tin</h2>
+            <p>Xây dựng và phát triển website: Nguyễn Hoàng Việt</p>
+            <p>Giảng viên hướng dẫn: Lê Thị Cẩm Mỹ</p>
+          </section>
+        </div>
+        <div class="col-12 col-md-6 footer-contact-column">
+          <section class="footer-card" aria-labelledby="footer-contact-title">
+            <h2 id="footer-contact-title">Liên hệ</h2>
+            <div class="footer-contact">
+              <span class="footer-link footer-placeholder" data-contact="hotline">
+                <svg class="footer-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M6.6 2h3.1l1.1 4.6-1.8 1.6a15 15 0 0 0 6.8 6.8l1.6-1.8 4.6 1.1v3.1a2 2 0 0 1-2.2 2A18 18 0 0 1 4.6 4.2 2 2 0 0 1 6.6 2Z"/></svg>
+                <span>[Placeholder] Hotline – chưa cung cấp</span>
+              </span>
+              <span class="footer-link footer-placeholder" data-contact="email">
+                <svg class="footer-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm9 8 8-6H4l8 6Zm0 2L4 9v8h16V9l-8 6Z"/></svg>
+                <span>[Placeholder] Email – chưa cung cấp</span>
+              </span>
+              <div class="footer-social">
+                <a class="footer-link footer-placeholder" data-contact="facebook">
+                  <svg class="footer-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M14 8V6.5c0-.5.3-.5.5-.5H17V2h-3c-3.4 0-4 2.5-4 4v2H8v4h2v10h4V12h3l.5-4H14Z"/></svg>
+                  <span>Facebook</span>
+                </a>
+                <a class="footer-link footer-placeholder" data-contact="instagram">
+                  <svg class="footer-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                  <span>Instagram</span>
+                </a>
+                <a class="footer-link footer-placeholder" data-contact="tiktok">
+                  <svg class="footer-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M15 2h3c.2 2.4 1.5 3.9 4 4v3c-1.8 0-3.2-.5-4-1.3V16a6 6 0 1 1-6-6v3.2a2.8 2.8 0 1 0 3 2.8V2Z"/></svg>
+                  <span>TikTok</span>
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

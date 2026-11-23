@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mốc thời gian – NAU Timeline</title>
+  <link rel="stylesheet" href="../../assets/vendor/bootstrap-5.3/bootstrap.min.css">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./scripts.js" defer></script>
+</head>
+<body class="site-page">
+  <header class="site-header">
+    <nav class="site-container site-nav" aria-label="Điều hướng chính">
+      <a class="brand" href="./index.html"><img src="../../assets/logo/nau-logo.png" alt="Logo NAU"></a>
+      <div class="desktop-menu">
+        <a href="./index.html">Trang chủ</a>
+        <a href="./moc-thoi-gian.html" aria-current="page">Mốc thời gian</a>
+        <a href="./nha-phat-trien.html">Nhà phát triển và xây dựng hệ thống</a>
+      </div>
+      <details class="mobile-menu">
+        <summary aria-label="Mở menu"><span class="hamburger"><span></span><span></span><span></span></span></summary>
+        <div class="mobile-menu-panel">
+          <a href="./index.html">Trang chủ</a>
+          <a href="./moc-thoi-gian.html" aria-current="page">Mốc thời gian</a>
+          <a href="./nha-phat-trien.html">Nhà phát triển và xây dựng hệ thống</a>
+        </div>
+      </details>
+    </nav>
+  </header>
+  <main class="site-container page-main timeline-main">
+    <h1>Mốc thời gian</h1>
+    <form class="creator-panel" aria-label="Lưu ảnh">
+      <div class="row g-3">
+        <div class="col-12 col-md-6">
+          <label class="field-label" for="visitor-name">Tên của bạn</label>
+          <input class="mockup-input" id="visitor-name" type="text" placeholder="Nhập tên">
+        </div>
+        <div class="col-12 col-md-6">
+          <label class="field-label" for="time-select">Chọn mốc thời gian</label>
+          <select class="mockup-input" id="time-select">
+            <option value="">Chọn mốc thời gian</option>
+            <option value="0630">06:30</option>
+            <option value="0900">09:00</option>
+            <option value="1200">12:00</option>
+            <option value="1530">15:30</option>
+            <option value="1900">19:00</option>
+          </select>
+        </div>
+        <div class="col-12 col-md-6">
+          <label class="field-label" for="photo-select">Chọn ảnh</label>
+          <select class="mockup-input" id="photo-select" disabled>
+            <option value="">Chọn mốc trước</option>
+          </select>
+        </div>
+        <div class="col-12 col-md-6">
+          <label class="field-label" for="visitor-note">Ghi chú</label>
+          <textarea class="mockup-input" id="visitor-note" placeholder="Nhập ghi chú"></textarea>
+        </div>
+      </div>
+      <div class="form-actions"><button class="button button-primary" type="button">Lưu ảnh</button></div>
+    </form>
+    <section class="time-group" aria-labelledby="time-0630">
+      <h2 id="time-0630">06:30</h2>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="photo-card" data-time="0630" data-photo-id="0630-01">
+            <div class="photo-card__media"><img src="../../assets/img/su-kien/0630/01.jpg" alt="[Alt ảnh 06:30 số 01 – placeholder]"></div>
+            <div class="photo-card__action"><a class="button button-outline" href="./anh.html?id=0630-01">Chia sẻ</a></div>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="photo-card" data-time="0630" data-photo-id="0630-02">
+            <div class="photo-card__media"><img src="../../assets/img/su-kien/0630/02.jpg" alt="[Alt ảnh 06:30 số 02 – placeholder]"></div>
+            <div class="photo-card__action"><a class="button button-outline" href="./anh.html?id=0630-02">Chia sẻ</a></div>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="photo-card" data-time="0630" data-photo-id="0630-03">
+            <div class="photo-card__media"><img src="../../assets/img/su-kien/0630/03.jpg" alt="[Alt ảnh 06:30 số 03 – placeholder]"></div>
+            <div class="photo-card__action"><a class="button button-outline" href="./anh.html?id=0630-03">Chia sẻ</a></div>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="photo-card" data-time="0630" data-photo-id="0630-04">
+            <div class="photo-card__media"><img src="../../assets/img/su-kien/0630/04.jpg" alt="[Alt ảnh 06:30 số 04 – placeholder]"></div>
+            <div class="photo-card__action"><a class="button button-outline" href="./anh.html?id=0630-04">Chia sẻ</a></div>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="photo-card" data-time="0630" data-photo-id="0630-05">
+            <div class="photo-card__media"><img src="../../assets/img/su-kien/0630/05.jpg" alt="[Alt ảnh 06:30 số 05 – placeholder]"></div>
+            <div class="photo-card__action"><a class="button button-outline" href="./anh.html?id=0630-05">Chia sẻ</a></div>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="photo-card" data-time="0630" data-photo-id="0630-06">
+            <div class="photo-card__media"><img src="../../assets/img/su-kien/0630/06.jpg" alt="[Alt ảnh 06:30 số 06 – placeholder]"></div>
+            <div class="photo-card__action"><a class="button button-outline" href="./anh.html?id=0630-06">Chia sẻ</a></div>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="photo-card" data-time="0630" data-photo-id="0630-07">
+            <div class="photo-card__media"><img src="../../assets/img/su-kien/0630/07.jpg" alt="[Alt ảnh 06:30 số 07 – placeholder]"></div>
+            <div class="photo-card__action"><a class="button button-outline" href="./anh.html?id=0630-07">Chia sẻ</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="time-group" aria-labelledby="time-0900">
+      <h2 id="time-0900">09:00</h2>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="photo-card" data-time="0900" data-photo-id="0900-01">
+            <div class="photo-card__media"><img src="../../assets/img/su-kien/0900/01.jpg" alt="[Alt ảnh 09:00 số 01 – placeholder]"></div>
+            <div class="photo-card__action"><a class="button button-outline" href="./anh.html?id=0900-01">Chia sẻ</a></div>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="photo-card" data-time="0900" data-photo-id="0900-02">
+            <div class="photo-card__media"><img src="../../assets/img/su-kien/0900/02.jpg" alt="[Alt ảnh 09:00 số 02 – placeholder]"></div>
+            <div class="photo-card__action"><a class="button button-outline" href="./anh.html?id=0900-02">Chia sẻ</a></div>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="photo-card" data-time="0900" data-photo-id="0900-03">
+            <div class="photo-card__media"><img src="../../assets/img/su-kien/0900/03.jpg" alt="[Alt ảnh 09:00 số 03 – placeholder]"></div>
+            <div class="photo-card__action"><a class="button button-outline" href="./anh.html?id=0900-03">Chia sẻ</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="time-group" aria-labelledby="time-1200">
+      <h2 id="time-1200">12:00</h2>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="photo-card" data-time="1200" data-photo-id="1200-01">
+            <div class="photo-card__media"><img src="../../assets/img/su-kien/1200/01.jpg" alt="[Alt ảnh 12:00 số 01 – placeholder]"></div>
+            <div class="photo-card__action"><a class="button button-outline" href="./anh.html?id=1200-01">Chia sẻ</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="time-group" aria-labelledby="time-1530">
+      <h2 id="time-1530">15:30</h2>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="photo-card" data-time="1530" data-photo-id="1530-01">
+            <div class="photo-card__media"><img src="../../assets/img/su-kien/1530/01.jpg" alt="[Alt ảnh 15:30 số 01 – placeholder]"></div>
+            <div class="photo-card__action"><a class="button button-outline" href="./anh.html?id=1530-01">Chia sẻ</a></div>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="photo-card" data-time="1530" data-photo-id="1530-02">
+            <div class="photo-card__media"><img src="../../assets/img/su-kien/1530/02.jpg" alt="[Alt ảnh 15:30 số 02 – placeholder]"></div>
+            <div class="photo-card__action"><a class="button button-outline" href="./anh.html?id=1530-02">Chia sẻ</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="time-group" aria-labelledby="time-1900">
+      <h2 id="time-1900">19:00</h2>
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="photo-card" data-time="1900" data-photo-id="1900-01">
+            <div class="photo-card__media"><img src="../../assets/img/su-kien/1900/01.jpg" alt="[Alt ảnh 19:00 số 01 – placeholder]"></div>
+            <div class="photo-card__action"><a class="button button-outline" href="./anh.html?id=1900-01">Chia sẻ</a></div>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="photo-card" data-time="1900" data-photo-id="1900-02">
+            <div class="photo-card__media"><img src="../../assets/img/su-kien/1900/02.jpg" alt="[Alt ảnh 19:00 số 02 – placeholder]"></div>
+            <div class="photo-card__action"><a class="button button-outline" href="./anh.html?id=1900-02">Chia sẻ</a></div>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="photo-card" data-time="1900" data-photo-id="1900-03">
+            <div class="photo-card__media"><img src="../../assets/img/su-kien/1900/03.jpg" alt="[Alt ảnh 19:00 số 03 – placeholder]"></div>
+            <div class="photo-card__action"><a class="button button-outline" href="./anh.html?id=1900-03">Chia sẻ</a></div>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="photo-card" data-time="1900" data-photo-id="1900-04">
+            <div class="photo-card__media"><img src="../../assets/img/su-kien/1900/04.jpg" alt="[Alt ảnh 19:00 số 04 – placeholder]"></div>
+            <div class="photo-card__action"><a class="button button-outline" href="./anh.html?id=1900-04">Chia sẻ</a></div>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="photo-card" data-time="1900" data-photo-id="1900-05">
+            <div class="photo-card__media"><img src="../../assets/img/su-kien/1900/05.jpg" alt="[Alt ảnh 19:00 số 05 – placeholder]"></div>
+            <div class="photo-card__action"><a class="button button-outline" href="./anh.html?id=1900-05">Chia sẻ</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="site-container"><img class="footer-logo" src="../../assets/logo/nau-logo.png" alt="Logo NAU"></div>
+  </footer>
+</body>
+</html>

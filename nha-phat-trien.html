@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giới thiệu – NAU Timeline</title>
+  <link rel="icon" type="image/png" href="./assets/logo/nau-logo.png">
+  <link rel="stylesheet" href="./assets/vendor/bootstrap-5.3/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/scripts.js" defer></script>
+</head>
+<body class="site-page">
+  <header class="site-header">
+    <nav class="site-container site-nav navbar navbar-expand-lg" aria-label="Điều hướng chính">
+      <a class="brand" href="./index.html" aria-label="Trang chủ NAU Timeline">
+        <img src="./assets/logo/nau-logo.png" alt="Logo NAU">
+        <span class="brand-name">Nghe An University</span>
+      </a>
+      <div class="desktop-menu">
+        <a href="./index.html">Trang chủ</a>
+        <a href="./moc-thoi-gian.html">Mốc thời gian</a>
+        <a href="./nha-phat-trien.html" aria-current="page">Giới thiệu</a>
+      </div>
+      <div class="mobile-menu">
+        <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-label="Mở menu" aria-controls="mobile-menu-panel">
+          <span class="hamburger" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+        <div class="mobile-menu-panel" id="mobile-menu-panel">
+          <a href="./index.html">Trang chủ</a>
+          <a href="./moc-thoi-gian.html">Mốc thời gian</a>
+          <a href="./nha-phat-trien.html" aria-current="page">Giới thiệu</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="site-container page-main developer-main">
+    <div class="content-panel reveal-target">
+      <h1>Giới thiệu</h1>
+      <p>Trang này giới thiệu người thực hiện và toàn bộ cách website NAU Timeline được xây dựng, từ công nghệ, quy trình đến tài liệu tham khảo.</p>
+    </div>
+    <section class="content-panel developer-info reveal-target" aria-labelledby="developer-info-title">
+      <h2 id="developer-info-title">Thông tin nhà phát triển</h2>
+      <dl class="developer-info__list">
+        <div class="developer-info__row"><dt>Họ và tên:</dt><dd>Nguyễn Hoàng Việt</dd></div>
+        <div class="developer-info__row"><dt>Hiện là:</dt><dd>Sinh viên năm 2</dd></div>
+        <div class="developer-info__row"><dt>Khoa:</dt><dd>Công nghệ thông tin</dd></div>
+        <div class="developer-info__row"><dt>Trường:</dt><dd>Trường Đại học Nghệ An</dd></div>
+        <div class="developer-info__row"><dt>Giảng viên hướng dẫn:</dt><dd>Lê Thị Cẩm Mỹ</dd></div>
+      </dl>
+    </section>
+    <section class="developer-gallery" aria-labelledby="developer-gallery-title">
+      <h2 class="reveal-target" id="developer-gallery-title">Diện mạo nhà phát triển</h2>
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <figure class="photo-card developer-card">
+            <div class="developer-card__media">
+              <img class="developer-photo" src="assets/img/nha-phat-trien/nha-phat-trien-01.jpg" alt="Nguyễn Hoàng Việt, ảnh 1" width="1080" height="1440" loading="lazy" decoding="async">
+            </div>
+          </figure>
+        </div>
+        <div class="col-12 col-md-4">
+          <figure class="photo-card developer-card">
+            <div class="developer-card__media">
+              <img class="developer-photo" src="assets/img/nha-phat-trien/nha-phat-trien-02.jpg" alt="Nguyễn Hoàng Việt, ảnh 2" width="1080" height="1440" loading="lazy" decoding="async">
+            </div>
+          </figure>
+        </div>
+        <div class="col-12 col-md-4">
+          <figure class="photo-card developer-card">
+            <div class="developer-card__media">
+              <img class="developer-photo developer-photo--third" src="assets/img/nha-phat-trien/nha-phat-trien-03.jpg" alt="Nguyễn Hoàng Việt, ảnh 3" width="720" height="1280" loading="lazy" decoding="async">
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <section class="content-panel developer-system full-width-copy reveal-target" aria-labelledby="developer-system-title">
+      <h2 id="developer-system-title">Xây dựng hệ thống website NAU Timeline</h2>
+      <h3>Tổng quan</h3>
+      <p>NAU Timeline là website tĩnh gồm bốn trang: Trang chủ, Mốc thời gian, Giới thiệu, và trang chi tiết ảnh (không nằm trong menu). Hệ thống giới thiệu 18 hình ảnh về các hoạt động tại Trường Đại học Nghệ An, sắp xếp theo năm mốc giờ trong ngày: 06:30, 09:00, 12:00, 15:30 và 19:00. Website không có máy chủ xử lý và không có cơ sở dữ liệu; mọi thao tác của người dùng được thực hiện ngay trong trình duyệt.</p>
+      <h3>Công nghệ và ngôn ngữ sử dụng</h3>
+      <ul>
+        <li>HTML5: xây dựng cấu trúc bốn trang bằng các thẻ ngữ nghĩa, khai báo ngôn ngữ tiếng Việt và thẻ meta viewport để hiển thị đúng trên thiết bị di động.</li>
+        <li>CSS3: tạo giao diện, bố cục lưới và flexbox, bo góc, viền, hiệu ứng chuyển động và giao diện thích ứng (responsive) cho màn hình máy tính 1440 px và điện thoại 390 px.</li>
+        <li>JavaScript thuần (không dùng framework): lọc ảnh theo mốc giờ, chọn ngẫu nhiên ảnh nổi bật, điều khiển menu, tạo ảnh để tải xuống, sao chép liên kết chia sẻ và hiển thị trang chi tiết ảnh.</li>
+        <li>Bootstrap 5.3 (tệp CSS lưu cục bộ): hệ thống lưới và các lớp tiện ích giao diện.</li>
+        <li>Phông chữ Noto Sans (định dạng woff2, bộ ký tự Latin và tiếng Việt, nhúng bằng @font-face từ tệp cục bộ): hiển thị đúng dấu tiếng Việt, không tải từ máy chủ bên ngoài.</li>
+        <li>Canvas API: vẽ ảnh gốc cùng dải thông tin gồm tên, mốc giờ, ghi chú và xuất thành tệp JPEG.</li>
+        <li>Clipboard API và window.location: tạo và sao chép liên kết tới trang chi tiết của từng ảnh.</li>
+        <li>Tham số id trên địa chỉ trang: trang chi tiết đọc id để hiển thị đúng ảnh, tiêu đề và phần giới thiệu.</li>
+        <li>SVG nội tuyến: biểu tượng điện thoại, thư, Facebook, Instagram, TikTok.</li>
+        <li>Công cụ: Visual Studio Code và máy chủ cục bộ để xem trước; trình duyệt và công cụ DevTools để kiểm tra giao diện.</li>
+      </ul>
+      <p>Hệ thống không dùng thư viện hiệu ứng, thư viện biểu tượng, CDN hay dịch vụ bên ngoài.</p>
+      <h3>Cấu trúc dự án</h3>
+      <p>Gốc dự án gồm bốn tệp trang index.html, moc-thoi-gian.html, nha-phat-trien.html và anh.html; thư mục css chứa styles.css và các tệp phông; thư mục js chứa scripts.js; thư mục assets chứa 18 ảnh sự kiện, ba ảnh trường hiện chưa sử dụng, ba ảnh nhà phát triển, logo và Bootstrap; thư mục design chứa bản mô phỏng thiết kế dùng để duyệt giao diện và không thuộc website.</p>
+      <h3>Chức năng chính và cách hoạt động</h3>
+      <ul>
+        <li>Trang chủ hiển thị 6 ảnh nổi bật không trùng lặp, được chọn ngẫu nhiên mỗi lần mở trang bằng thuật toán xáo trộn Fisher–Yates từ 17 ảnh (không gồm ảnh 1200-01); bấm vào ảnh để mở trang chi tiết. Nếu JavaScript không chạy, sáu ảnh cố định trong HTML vẫn hiển thị.</li>
+        <li>Thẻ timeline ở trang Mốc thời gian cho phép nhập tên, chọn mốc thời gian, chọn ảnh và ghi chú. Danh sách chọn ảnh được lọc theo mốc giờ. Khi chưa chọn đủ mốc và ảnh, bên dưới hiện cả 18 ảnh; khi chọn đủ, chỉ hiển thị ảnh được chọn.</li>
+        <li>Lưu ảnh: trình duyệt dùng Canvas để vẽ ảnh gốc ở trên và dải nền trắng bên dưới chứa tên, mốc giờ và ghi chú, rồi xuất tệp JPEG chất lượng 0,95 để tải xuống. Ảnh gốc không bị chỉnh sửa. Chỉ cần chọn mốc giờ và ảnh; tên và ghi chú không bắt buộc, lần lượt giới hạn 60 và 300 ký tự. Tên tệp lấy theo tiêu đề của ảnh.</li>
+        <li>Chia sẻ: tạo liên kết dạng anh.html?id=... từ địa chỉ trang đang mở và sao chép vào bộ nhớ tạm, sau đó báo đã sao chép liên kết. Liên kết không kèm tên và ghi chú. Nếu không sao chép được, trình duyệt mở trang chi tiết. Nội dung chính của trang đó chỉ hiển thị một ảnh cùng phần giới thiệu chi tiết; nếu id không hợp lệ, trang hiện thông báo ngắn và nút quay lại.</li>
+        <li>Menu bám ở đầu trang khi cuộn; trên điện thoại là nút ba gạch, bảng menu trượt xuống khi bấm, đổi thành dấu X khi mở và đóng khi bấm lại hoặc chọn một mục.</li>
+        <li>Hiệu ứng: hiện dần khi cuộn tới, phản hồi khi rê chuột và khi bấm, chuyển trang mượt; tự tắt khi hệ điều hành bật chế độ giảm chuyển động.</li>
+      </ul>
+      <h3>Cách thức xây dựng</h3>
+      <ol>
+        <li>Kiểm kê tài nguyên: liệt kê 23 tệp trong gói tài nguyên và đối chiếu đường dẫn, số byte và kích thước ảnh với tệp ZIP gốc; kết quả khớp 23/23 tệp. Mã băm SHA-256 được dùng để kiểm tra nội dung trùng lặp.</li>
+        <li>Xác định phạm vi và nguyên tắc: bốn trang, các chức năng chọn ảnh, lưu ảnh, chia sẻ; không sửa ảnh gốc, không thêm tài nguyên ngoài, không viết chú thích (comment) trong các tệp HTML, CSS và JavaScript do dự án viết, không dùng dịch vụ bên ngoài.</li>
+        <li>Thiết kế: phác thảo bố cục ban đầu, sau đó mở rộng thành bốn trang trên Desktop và Mobile và duyệt thiết kế bằng bản mô phỏng HTML trước khi viết mã chính thức.</li>
+        <li>Viết mã: dựng HTML, CSS và JavaScript theo thiết kế đã duyệt, sau đó bổ sung ảnh nổi bật, thẻ timeline, Lưu ảnh, Chia sẻ, Footer, tiêu đề và phần giới thiệu từng ảnh.</li>
+        <li>Kiểm thử: chạy bằng máy chủ cục bộ, kiểm tra ở chiều rộng 1440 px và 390 px, kiểm tra console không báo lỗi, đường dẫn ảnh, 18 ảnh hiển thị đúng, các chức năng Lưu ảnh, Chia sẻ và menu.</li>
+        <li>Hoàn thiện nội dung: tiêu đề và phần giới thiệu từng ảnh viết dựa trên nội dung nhìn thấy trong ảnh; phần giới thiệu trường dựa trên thông tin công bố tại nau.edu.vn.</li>
+      </ol>
+      <p>Trong quá trình thực hiện, tác giả có sử dụng công cụ trí tuệ nhân tạo (Claude và Codex) để hỗ trợ lập kế hoạch, soạn mã và kiểm tra. Tác giả là người đặt yêu cầu, quyết định phạm vi, duyệt từng bước và kiểm thử kết quả.</p>
+      <h3>Nguyên tắc thực hiện</h3>
+      <p>Ảnh và logo được dùng nguyên bản, không chỉnh sửa tệp gốc. Các tệp HTML, CSS và JavaScript do dự án viết không chứa chú thích (comment) và không tải tài nguyên bên ngoài. Mọi nội dung chưa được cung cấp đều được đánh dấu rõ là nội dung giữ chỗ cho đến khi được bổ sung.</p>
+      <h3>Tài liệu</h3>
+      <ul>
+        <li>Tài liệu dự án: bản đặc tả dự án NAU Timeline; bảng kiểm kê tài nguyên; bản mô phỏng thiết kế (thư mục design).</li>
+        <li>Tài liệu tham khảo: Bootstrap 5.3 Documentation (getbootstrap.com); MDN Web Docs (developer.mozilla.org) về HTML, CSS, JavaScript, Canvas API, Clipboard API và URLSearchParams; Google Fonts, họ phông Noto Sans (fonts.google.com); trang thông tin của Trường Đại học Nghệ An (nau.edu.vn).</li>
+        <li>Giấy phép: Bootstrap theo giấy phép MIT; Noto Sans theo giấy phép SIL Open Font License.</li>
+      </ul>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="site-container">
+      <div class="footer-brand">
+        <img class="footer-logo" src="./assets/logo/nau-logo.png" alt="">
+        <span class="brand-name">Nghe An University</span>
+      </div>
+      <div class="row g-4 footer-grid">
+        <div class="col-12 col-md-6 footer-info-column">
+          <section class="footer-card footer-info" aria-labelledby="footer-info-title">
+            <h2 id="footer-info-title">Thông tin</h2>
+            <p>Xây dựng và phát triển website: Nguyễn Hoàng Việt</p>
+            <p>Giảng viên hướng dẫn: Lê Thị Cẩm Mỹ</p>
+          </section>
+        </div>
+        <div class="col-12 col-md-6 footer-contact-column">
+          <section class="footer-card" aria-labelledby="footer-contact-title">
+            <h2 id="footer-contact-title">Liên hệ</h2>
+            <div class="footer-contact">
+              <span class="footer-link footer-placeholder" data-contact="hotline">
+                <svg class="footer-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M6.6 2h3.1l1.1 4.6-1.8 1.6a15 15 0 0 0 6.8 6.8l1.6-1.8 4.6 1.1v3.1a2 2 0 0 1-2.2 2A18 18 0 0 1 4.6 4.2 2 2 0 0 1 6.6 2Z"/></svg>
+                <span>[Placeholder] Hotline – chưa cung cấp</span>
+              </span>
+              <span class="footer-link footer-placeholder" data-contact="email">
+                <svg class="footer-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm9 8 8-6H4l8 6Zm0 2L4 9v8h16V9l-8 6Z"/></svg>
+                <span>[Placeholder] Email – chưa cung cấp</span>
+              </span>
+              <div class="footer-social">
+                <a class="footer-link footer-placeholder" data-contact="facebook">
+                  <svg class="footer-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M14 8V6.5c0-.5.3-.5.5-.5H17V2h-3c-3.4 0-4 2.5-4 4v2H8v4h2v10h4V12h3l.5-4H14Z"/></svg>
+                  <span>Facebook</span>
+                </a>
+                <a class="footer-link footer-placeholder" data-contact="instagram">
+                  <svg class="footer-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                  <span>Instagram</span>
+                </a>
+                <a class="footer-link footer-placeholder" data-contact="tiktok">
+                  <svg class="footer-icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="currentColor"><path d="M15 2h3c.2 2.4 1.5 3.9 4 4v3c-1.8 0-3.2-.5-4-1.3V16a6 6 0 1 1-6-6v3.2a2.8 2.8 0 1 0 3 2.8V2Z"/></svg>
+                  <span>TikTok</span>
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
